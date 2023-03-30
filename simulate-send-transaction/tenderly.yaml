@@ -9,5 +9,6 @@ actions:
         function: extension:sendSimulateRawTransaction
         trigger:
           type: webhook
-
+          webhook:
+            authenticated: false
 project_slug: ""

@@ -1,0 +1,14 @@
+account_id: ""
+actions:
+  tenderly/extensions-library:
+    runtime: v2
+    sources: actions
+    specs:
+      getChainLinkPriceFeedByCoinPair:
+        description: Chainlink price feed from https://docs.chain.link/data-feeds/examples
+        function: extension:getChainLinkPriceFeed
+        trigger:
+          type: webhook
+          webhook:
+            authenticated: false
+project_slug: ""

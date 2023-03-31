@@ -11,30 +11,35 @@ export const sendSimulateRawTransaction: ActionFn = async (context: Context, eve
   // Using the Ethers.js provider class to call the RPC URL
   const provider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);
 
-  // Decode raw transaction
+  // Creating a transaction object
   const tx = {
     ...webhookEvent.payload,
     data: webhookEvent.payload.data || webhookEvent.payload.input,
   };
 
   // Simulate transaction to get execution results
-  const simResponse = await provider.send('tenderly_simulateTransaction', [
+  const simulationResponse = await provider.send('tenderly_simulateTransaction', [
     {
-      ...tx,
+      from: tx.from,
+      to: tx.to,
+      gas: tx.gas,
+      gasPrice: tx.gasPrice,
+      value: tx.value,
+      data: tx.data,
     },
     'latest',
   ]);
-  console.log({ simResponse });
+  console.log({ simulationResponse });
 
   // If simulation fails, return error
-  if (simResponse.status == false) {
+  if (simulationResponse.status === false) {
     return Promise.reject({
       error: 'Simulation failed',
-      simResponse,
+      simulationResponse,
     });
   }
 
-  return simResponse;
+  return simulationResponse;
   // Send transaction to the network
   // return provider.send('eth_sendRawTransaction', tx);
 };

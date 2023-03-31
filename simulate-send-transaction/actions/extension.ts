@@ -11,35 +11,36 @@ export const sendSimulateRawTransaction: ActionFn = async (context: Context, eve
   // Using the Ethers.js provider class to call the RPC URL
   const provider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);
 
-  // Creating a transaction object
-  const tx = {
-    ...webhookEvent.payload,
-    data: webhookEvent.payload.data || webhookEvent.payload.input,
+  // Getting the raw transaction payload from the webhook event
+  const txPayload = webhookEvent.payload.data;
+
+  // Parsing the transaction payload
+  const tx = ethers.utils.parseTransaction(txPayload);
+
+  // Creating a new transaction object with the parsed transaction
+  // in order to support the tenderly_simulateTransaction RPC call
+  const parsedTransaction = {
+    from: tx.from,
+    to: tx.to,
+    gas: tx.gasLimit?._hex,
+    gasPrice: tx.gasPrice?._hex,
+    value: tx.value?._hex,
+    data: tx.data,
   };
 
   // Simulate transaction to get execution results
-  const simulationResponse = await provider.send('tenderly_simulateTransaction', [
-    {
-      from: tx.from,
-      to: tx.to,
-      gas: tx.gas,
-      gasPrice: tx.gasPrice,
-      value: tx.value,
-      data: tx.data,
-    },
-    'latest',
-  ]);
-  console.log({ simulationResponse });
+  const simulationResponse = await provider.send('tenderly_simulateTransaction', [parsedTransaction, 'latest']);
 
   // If simulation fails, return error
   if (simulationResponse.status === false) {
+    console.log('Simulate transaction failed');
     return Promise.reject({
       error: 'Simulation failed',
       simulationResponse,
     });
   }
 
-  return simulationResponse;
-  // Send transaction to the network
-  // return provider.send('eth_sendRawTransaction', tx);
+  // If simulation succeeds, send the transaction
+  console.log('Simulate transaction success');
+  return provider.send('eth_sendRawTransaction', [txPayload]);
 };

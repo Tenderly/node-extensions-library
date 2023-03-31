@@ -7,3 +7,10 @@ Node Extensions is a game-changing enhancement to our existing production node. 
 ## How to use
 
 TBD
+
+## Node Extension Examples
+
+Here are examples of Node Extensions that you can use in your projects:
+
+- [chainlink-price-feed](./chainlink-price-feed) - A Node Extension that allows you to query Chainlink Price Feeds
+- [simulate-send-transaction](./simulate-send-transaction) - A Node Extension that allows you to simulate a transaction before sending on-chain

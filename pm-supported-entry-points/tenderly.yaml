@@ -1,0 +1,14 @@
+account_id: ""
+actions:
+  tenderly/extensions-library:
+    runtime: v2
+    sources: actions
+    specs:
+      pmSupportedEntryPoints:
+        description: This function returns the list of entryPoint contracts that are supported on that chain.
+        function: extension:pmSupportedEntryPoints
+        trigger:
+          type: webhook
+          webhook:
+            authenticated: false
+project_slug: ""

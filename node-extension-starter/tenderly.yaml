@@ -1,0 +1,14 @@
+account_id: ""
+actions:
+  tenderly/extensions-library:
+    runtime: v2
+    sources: actions
+    specs:
+      exampleNodeExtension:
+        description: This is an example Node Extension
+        function: extension:example
+        trigger:
+          type: webhook
+          webhook:
+            authenticated: false
+project_slug: ""

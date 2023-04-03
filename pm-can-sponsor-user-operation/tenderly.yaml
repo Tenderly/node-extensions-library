@@ -1,0 +1,14 @@
+account_id: ""
+actions:
+  tenderly/extensions-library:
+    runtime: v2
+    sources: actions
+    specs:
+      pmCanSponsorUserOperation:
+        description: This function checks whether a User Operation can be sponsored by Pimlico's Paymaster service on behalf of a third-party dapp.
+        function: extension:pmCanSponsorUserOperation
+        trigger:
+          type: webhook
+          webhook:
+            authenticated: false
+project_slug: ""

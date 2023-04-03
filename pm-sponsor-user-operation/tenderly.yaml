@@ -1,0 +1,14 @@
+account_id: ""
+actions:
+  tenderly/extensions-library:
+    runtime: v2
+    sources: actions
+    specs:
+      pmSponsorUserOperation:
+        description: This function asks Pimlico's paymaster to sponsor the submitted User Operation on behalf of the wallet.
+        function: extension:pmSponsorUserOperation
+        trigger:
+          type: webhook
+          webhook:
+            authenticated: false
+project_slug: ""

@@ -1,4 +1,4 @@
-# PM Supported Entry Points
+# PM Supported Entry Points Node Extension
 
 This function returns the list of entryPoint contracts that are supported on that chain.
 

@@ -1,0 +1,15 @@
+account_id: ""
+actions:
+  node-extension/extensions-library:
+    runtime: v2
+    sources: actions
+    specs:
+      polygon-block-author:
+        description: Returns block author for Polygon networks.
+        function: example:blockAuthor
+        trigger:
+          type: webhook
+          webhook:
+            authenticated: false
+
+project_slug: ""

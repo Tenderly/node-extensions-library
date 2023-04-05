@@ -13,6 +13,7 @@ TBD
 This is a Node Extension Starter. You can use this example as a starting point for your own Node Extension.
 
 - [node-extension-starter](./node-extension-starter) - A Node Extension that gets the current block number
+- [node-extension-starter-jest](./node-extension-starter-jest) - A Node Extension that gets the current block number & has Jest testing library installed
 
 Here are examples of Node Extensions that you can use in your projects:
 

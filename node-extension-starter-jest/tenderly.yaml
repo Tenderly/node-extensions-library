@@ -1,0 +1,14 @@
+account_id: ""
+actions:
+  tenderly/extensions-library:
+    runtime: v2
+    sources: actions
+    specs:
+      exampleNodeExtensionJest:
+        description: This is an example Node Extension with Jest
+        function: extension:example
+        trigger:
+          type: webhook
+          webhook:
+            authenticated: false
+project_slug: ""

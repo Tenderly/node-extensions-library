@@ -1,14 +1,14 @@
-import { ActionFn, Context, Event, WebhookEvent } from '@tenderly/actions';
+import { ActionFn, Context, Event, ExtensionEvent } from '@tenderly/actions';
 import { ethers } from 'ethers';
 
 export const pmSupportedEntryPoints: ActionFn = async (context: Context, event: Event) => {
-  // Casting the event to a WebhookEvent
-  const webhookEvent: WebhookEvent = event as WebhookEvent;
+  // Casting the event to a ExtensionEvent
+  const extensionEvent: ExtensionEvent = event as ExtensionEvent;
 
-  // Getting the block number from the webhook event payload
-  const { chain } = webhookEvent.payload;
+  // Getting the chain from the extension event
+  const [chain] = extensionEvent;
 
-  // Getting the Pimlico API key from the secrets
+  // Getting the Pimlico API key from the Web3 Action Secrets
   const PIMLICO_API_KEY = await context.secrets.get('PIMLICO_API_KEY');
 
   // Creating the Pimlico endpoint

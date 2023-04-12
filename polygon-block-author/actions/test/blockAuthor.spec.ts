@@ -11,6 +11,9 @@ describe('borAuthor', () => {
   beforeEach(() => {
     // @ts-ignore
     context = {
+      metadata: {
+        getNetwork: jest.fn().mockReturnValue(Network.POLYGON)
+      },
       gateways: {
         getGateway: jest.fn().mockReturnValue(`https://polygon-mainnet.gateway.tenderly.co/${process.env.TENDERLY_WEB3_GATEWAY_ACCESS_TOKEN}`),
       },

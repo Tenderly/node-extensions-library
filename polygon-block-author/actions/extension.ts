@@ -13,11 +13,20 @@ export const blockAuthor: ActionFn = async (context: Context, event: Event) => {
     // Casting the event to a WebhookEvent
     const webhookEvent: WebhookEvent = event as WebhookEvent;
 
-    // require(context.metadata.network in [Network.Polygon, Network.Mumbai])
-
     // Setting a variable that will store the Web3 Gateway RPC URL and secret key
-    // TODO: switch to Polygon
-    const defaultGatewayURL = context.gateways.getGateway(Network.MAINNET);
+    const network = context.metadata.getNetwork();
+    if (network === undefined) {
+        return Promise.reject({
+            error: 'network not defined',
+        });
+    }
+    if (network != Network.POLYGON && network != Network.MUMBAI) {
+        return Promise.reject({
+            error: 'network not supported',
+        });
+    }
+
+    const defaultGatewayURL= context.gateways.getGateway();
 
     // Using the Ethers.js provider class to call the RPC URL
     const provider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);

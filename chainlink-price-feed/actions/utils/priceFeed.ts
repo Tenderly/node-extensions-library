@@ -24,7 +24,7 @@ const isValidCoinPair = (input: string): boolean => {
   return isValidCoin(firstCoin) && isValidCoin(secondCoin);
 };
 
-const getPriceFeedByNetwork = (network: Network): ChainMetadata[] => {
+const getPriceFeedByNetwork = (network?: Network): ChainMetadata[] => {
   if (!isValidNetwork(network)) {
     throw new Error('Invalid network. Supported networks are Ethereum Mainnet, Sepolia Testnet & Goerli Testnet');
   }
@@ -47,7 +47,7 @@ const getPriceFeedByNetwork = (network: Network): ChainMetadata[] => {
   return [];
 };
 
-const getContractAddressFromCoinPair = (coinPair: string, network: Network): string | null => {
+const getContractAddressFromCoinPair = (coinPair: string, network?: Network): string | null => {
   if (!isValidNetwork(network)) {
     throw new Error('Invalid network. Supported networks are Ethereum Mainnet, Sepolia Testnet & Goerli Testnet');
   }

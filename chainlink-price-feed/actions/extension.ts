@@ -1,4 +1,4 @@
-import { ActionFn, Context, Event, WebhookEvent } from '@tenderly/actions';
+import { ActionFn, Context, Event, ExtensionEvent } from '@tenderly/actions';
 import { ethers } from 'ethers';
 import { isValidNetwork } from './utils/networkHelper';
 import { getContractAddressFromCoinPair, isValidCoinPair } from './utils/priceFeed';
@@ -6,10 +6,11 @@ import aggregatorV3InterfaceABI from './abi/aggregatorV3InterfaceABI.json';
 
 export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Event) => {
   // Casting the event to a WebhookEvent
-  const webhookEvent: WebhookEvent = event as WebhookEvent;
+  const params: ExtensionEvent = event as ExtensionEvent;
 
   // Getting the coin pair and network from the webhook event payload
-  const { coinPair, network } = webhookEvent.payload;
+  const [ coinPair ] = params;
+  const network = context.metadata.getNetwork()
 
   // Checking if the network is valid
   if (!isValidNetwork(network)) {
@@ -22,7 +23,7 @@ export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Even
   }
 
   // Setting a variable that will store the Web3 Gateway RPC URL and secret key
-  const defaultGatewayURL = context.gateways.getGateway(network);
+  const defaultGatewayURL = context.gateways.getGateway();
 
   // Using the Ethers.js provider class to call the RPC URL
   const provider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);

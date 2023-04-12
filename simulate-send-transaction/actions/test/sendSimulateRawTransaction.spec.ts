@@ -1,10 +1,10 @@
 import { Context, Event, WebhookEvent } from '@tenderly/actions';
 import * as dotenv from 'dotenv';
-import { sendSimulateRawTransaction } from '../extension';
+import { sendRawTransaction } from '../extension';
 
 dotenv.config();
 
-describe('sendSimulateRawTransaction', () => {
+describe('sendRawTransaction', () => {
   let context: Context;
   let event: Event;
 
@@ -25,7 +25,7 @@ describe('sendSimulateRawTransaction', () => {
 
   test('Simulate transaction before sending throws an error', async () => {
     try {
-      await sendSimulateRawTransaction(context, event);
+      await sendRawTransaction(context, event);
     } catch (error) {
       expect(error).toBeDefined();
     }

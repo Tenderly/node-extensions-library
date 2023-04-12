@@ -1,7 +1,7 @@
 import { ActionFn, Context, Event, Network, WebhookEvent } from '@tenderly/actions';
 import { ethers } from 'ethers';
 
-export const sendSimulateRawTransaction: ActionFn = async (context: Context, event: Event) => {
+export const sendRawTransaction: ActionFn = async (context: Context, event: Event) => {
   // Casting the event to a WebhookEvent
   const webhookEvent: WebhookEvent = event as WebhookEvent;
 
@@ -33,7 +33,6 @@ export const sendSimulateRawTransaction: ActionFn = async (context: Context, eve
 
   // If simulation fails, return error
   if (simulationResponse.status === false) {
-    console.log('Simulate transaction failed');
     return Promise.reject({
       error: 'Simulation failed',
       simulationResponse,
@@ -41,6 +40,5 @@ export const sendSimulateRawTransaction: ActionFn = async (context: Context, eve
   }
 
   // If simulation succeeds, send the transaction
-  console.log('Simulate transaction success');
   return provider.send('eth_sendRawTransaction', [txPayload]);
 };

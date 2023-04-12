@@ -1,12 +1,12 @@
 account_id: ""
 actions:
-  tenderly/extensions-library:
+  node-extension/node-extensions-library:
     runtime: v2
     sources: actions
     specs:
-      sendSimulateRawTransaction:
+      sendSimulateRawTansaction:
         description: Simulates transaction and sends transaction on-chain if successful
-        function: extension:sendSimulateRawTransaction
+        function: extension:sendRawTransaction
         trigger:
           type: webhook
           webhook:

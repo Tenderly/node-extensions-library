@@ -23,7 +23,7 @@ Parameters
 Example:
 ```json
 {
-  "id": "1"
+  "id": "1",
   "jsonrpc": "2.0",
   "method": "extension_simulateMempoolTransaction",
   "params": ["e00e63a38f50e5effce7d5546e7a7e62312468a74a179bace67ff1d82c029366"]

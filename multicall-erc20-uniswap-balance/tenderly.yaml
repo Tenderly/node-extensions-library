@@ -1,0 +1,14 @@
+account_id: ""
+actions:
+  node-extensions/node-extensions-library:
+    runtime: v2
+    sources: actions
+    specs:
+      multicallUniswapERC20Balance:
+        description: Send batch transactions
+        function: extension:sendBatchTransactions
+        trigger:
+          type: webhook
+          webhook:
+            authenticated: false
+project_slug: ""

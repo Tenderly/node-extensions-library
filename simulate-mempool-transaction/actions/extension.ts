@@ -1,18 +1,17 @@
-import {ActionFn, Context, Event, Network, WebhookEvent} from '@tenderly/actions';
+import {ActionFn, Context, Event, ExtensionEvent} from '@tenderly/actions';
 import {ethers} from 'ethers';
 
 export const simulateMempoolTransaction: ActionFn = async (context: Context, event: Event) => {
     // Casting the event to a WebhookEvent
-    const webhookEvent: WebhookEvent = event as WebhookEvent;
+    const params: ExtensionEvent = event as ExtensionEvent;
 
     // Setting a variable that will store the Web3 Gateway RPC URL and secret key
-    const defaultGatewayURL = context.gateways.getGateway(Network.MAINNET);
+    const defaultGatewayURL = context.gateways.getGateway();
 
     // Using the Ethers.js provider class to call the RPC URL
     const provider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);
 
-    console.log(webhookEvent);
-    const txHash = webhookEvent.payload[0];
+    const txHash = params[0];
 
     const tx = await provider.send("eth_getTransactionByHash", [txHash])
     // if transaction is not found, return error

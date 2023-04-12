@@ -18,8 +18,10 @@ This is a Node Extension Starter. You can use this example as a starting point f
 Here are examples of Node Extensions that you can use in your projects:
 
 - [chainlink-price-feed](./chainlink-price-feed) - A Node Extension that allows you to query Chainlink Price Feeds
+- [multicall-uniswap-erc20-balance](./multicall-uniswap-erc20-balance) - A Node Extension that uses Wonderland's multicall strategy to quickly fetch Uniswap's ERC20 balances
 - [pm-can-sponsor-user-operation](./pm-can-sponsor-user-operation) - A Node Extension that checks whether a User Operation can be sponsored by Pimlico's Paymaster service on behalf of a third-party dapp
 - [pm-sponsor-user-operation](./pm-sponsor-user-operation) - A Node Extension that asks Pimlico's paymaster to sponsor the submitted User Operation on behalf of the wallet
 - [pm-supported-entry-points](./pm-supported-entry-points) - A Node Extension that returns the list of entryPoint contracts that are supported on that chain
 - [polygon-block-author](./polygon-block-author) - A Node Extension that returns the block author for a given block number on Polygon (Matic) network
+- [simulate-mempool-transaction](./simulate-mempool-transaction) - A Node Extension that allows you to simulate a transaction in the mempool
 - [simulate-send-transaction](./simulate-send-transaction) - A Node Extension that allows you to simulate a transaction before sending on-chain

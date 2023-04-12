@@ -1,35 +1,37 @@
-import { ActionFn, Context, Event, Network, WebhookEvent } from '@tenderly/actions';
+import {ActionFn, Context, Event, ExtensionEvent} from '@tenderly/actions';
 import { ethers } from 'ethers';
 
 export const sendRawTransaction: ActionFn = async (context: Context, event: Event) => {
   // Casting the event to a WebhookEvent
-  const webhookEvent: WebhookEvent = event as WebhookEvent;
+  const params: ExtensionEvent = event as ExtensionEvent;
 
   // Setting a variable that will store the Web3 Gateway RPC URL and secret key
-  const defaultGatewayURL = context.gateways.getGateway(Network.MAINNET);
+  const defaultGatewayURL = context.gateways.getGateway();
 
   // Using the Ethers.js provider class to call the RPC URL
   const provider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);
 
   // Getting the raw transaction payload from the webhook event
-  const txPayload = webhookEvent.payload.data;
+  const signedTx = params[0];
 
   // Parsing the transaction payload
-  const tx = ethers.utils.parseTransaction(txPayload);
+  const tx = ethers.utils.parseTransaction(signedTx);
 
   // Creating a new transaction object with the parsed transaction
   // in order to support the tenderly_simulateTransaction RPC call
-  const parsedTransaction = {
+  const txPayload = {
     from: tx.from,
     to: tx.to,
     gas: tx.gasLimit?._hex,
     gasPrice: tx.gasPrice?._hex,
+    maxPriorityFeePerGas: tx.maxPriorityFeePerGas?._hex,
+    maxFeePerGas: tx.maxFeePerGas?._hex,
     value: tx.value?._hex,
     data: tx.data,
   };
 
   // Simulate transaction to get execution results
-  const simulationResponse = await provider.send('tenderly_simulateTransaction', [parsedTransaction, 'latest']);
+  const simulationResponse = await provider.send('tenderly_simulateTransaction', [txPayload, 'latest']);
 
   // If simulation fails, return error
   if (simulationResponse.status === false) {
@@ -40,5 +42,5 @@ export const sendRawTransaction: ActionFn = async (context: Context, event: Even
   }
 
   // If simulation succeeds, send the transaction
-  return provider.send('eth_sendRawTransaction', [txPayload]);
+  return provider.send('eth_sendRawTransaction', params);
 };

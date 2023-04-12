@@ -1,8 +1,17 @@
 # Tenderly Node Extension Library
 
+<div align="center">
+    <a href="https://tenderly.co">
+        <img src="https://storage.googleapis.com/tenderly-public-assets/node-extensions/node-extensions.png" alt="tenderly-logo" width="100%" height="auto" style="background-color: #ffffffb2;padding: 10px 20px;box-sizing: border-box;max-width:200px;" />
+    </a>
+</div>
+
+
 This library is a collection of Tenderly Node Extensions. It is used to extend the Tenderly Web3 Gateway (Node-as-a-Service) with additional functionality.
 
 Node Extensions is a game-changing enhancement to our existing production node. It allows devs to create custom JSON-RPC method names and write custom JS/TS code snippets, which will be executed each time the method is called. It’s like having your very own sorcerer’s apprentice working behind the scenes! 🧙‍
+
+> **Note:** Node Extensions require @tenderly/actions version >= **0.2.0**.
 
 ## How to use
 

@@ -23,9 +23,10 @@ Parameters
 Example:
 ```json
 {
-  "params": [
-    "USDT/ETH"
-  ]
+  "id": "1"
+  "jsonrpc": "2.0",
+  "method": "extension_sendRawTransaction",
+  "params": ["USDT/ETH"]
 }
 ```
 

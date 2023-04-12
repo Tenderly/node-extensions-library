@@ -1,4 +1,4 @@
-# PM Supported Entry Points Node Extension
+# PM Supported Entry Points Extension
 
 This function returns the list of entryPoint contracts that are supported on that chain.
 
@@ -10,12 +10,15 @@ More info https://docs.pimlico.io/docs/wallets/api/#pm_supportedentrypoints.
 
 ## Usage
 
-TODO
+Go to JSON-RPC Request Builder and select "PM Supported Entry Points" from the dropdown menu. You can then enter the JSON payload and click "Send Request".
+
+## Method
+
+### **extension_pmSupportedEntryPoints**
 
 ### Request
 
-TODO
-
+Example:
 ```json
 {
   "jsonrpc": "2.0",
@@ -29,6 +32,7 @@ TODO
 
 A JSON-RPC response object with a single array representing the entryPoint contracts supported.
 
+Example
 ```json
 {
   "jsonrpc": "2.0",

@@ -8,7 +8,11 @@ More info https://docs.pimlico.io/docs/wallets/api/#pm_cansponsoruseroperation.
 
 ## Usage
 
-TODO
+Go to JSON-RPC Request Builder and select "PM Can Sponsor User Operation" from the dropdown menu. You can then enter the JSON payload and click "Send Request".
+
+## Method
+
+### **extension_pmCanSponsorUserOperation**
 
 ### Request
 
@@ -29,6 +33,7 @@ Parameters:
 - `entryPoint`: The EntryPoint contract address the User Operation is being submitted to.
 - `referralAddress`: A 20-byte hex address, likely owned by the wallet operator, that will accrue any referral fees from sponsored User Operations.
 
+Example:
 ```json
 {
   "jsonrpc": "2.0",
@@ -63,6 +68,7 @@ Parameters:
 A JSON-RPC response object with a single member:
  - `paymasterAndData`: A hex string that represents an array of bytes. It contains information about whether this User Operation can be sponsored by the Paymaster service and any additional data required by the Paymaster service. If this User Operation cannot be sponsored, it returns an empty string.
 
+Example:
 ```json
 {
   "jsonrpc": "2.0",

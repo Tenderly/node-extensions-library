@@ -23,7 +23,6 @@ contract BatchRequest {
     for(uint256 i = 0; i < step; i++) {
         address curr = IFactory(factory).allPairs(from+i);
         returnData[i] = IERC20(curr).balanceOf(curr);
-
     }
 
     // insure abi encoding, not needed here but increase reusability for different return types

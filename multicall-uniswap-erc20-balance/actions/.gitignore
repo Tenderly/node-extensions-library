@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+
+# Ignore tsc output
+out/**/*
+
+.env
+
+# Hardhat files
+cache
+artifacts
+typechained
+typechain-types
+deployments/hardhat
+deployments/localhost

@@ -5,8 +5,8 @@ actions:
     sources: actions
     specs:
       multicallUniswapERC20Balance:
-        description: Send batch transactions
-        function: extension:sendBatchTransactions
+        description: multicall uniswap erc20 balance
+        function: extension:multicallUniswapERC20Balance
         trigger:
           type: webhook
           webhook:

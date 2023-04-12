@@ -4,7 +4,7 @@ actions:
     runtime: v2
     sources: actions
     specs:
-      polygon-block-author:
+      polygonBlockAuthor:
         description: Returns block author for Polygon networks.
         function: extension:blockAuthor
         trigger:

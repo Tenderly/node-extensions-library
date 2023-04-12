@@ -22,11 +22,11 @@ export const sendRawTransaction: ActionFn = async (context: Context, event: Even
   const txPayload = {
     from: tx.from,
     to: tx.to,
-    gas: tx.gasLimit?._hex,
+    gas: ethers.utils.hexValue(tx.gasLimit?._hex),
     gasPrice: tx.gasPrice?._hex,
     maxPriorityFeePerGas: tx.maxPriorityFeePerGas?._hex,
     maxFeePerGas: tx.maxFeePerGas?._hex,
-    value: tx.value?._hex,
+    value: ethers.utils.hexValue(tx.value?._hex),
     data: tx.data,
   };
 

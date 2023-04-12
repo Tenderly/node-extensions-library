@@ -1,4 +1,4 @@
-# Simulate Send Transaction Node Extension
+# Simulate Send Transaction Extension
 
 This extension sends signed transaction to the network after it ensures that the simulation of the transaction is successful. This serves as a safety net, preventing you to submit transaction that will likely fail.
 

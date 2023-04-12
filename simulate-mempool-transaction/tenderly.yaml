@@ -4,12 +4,12 @@ actions:
     runtime: v2
     sources: actions
     specs:
-      simulate-mempool-transaction:
-        description: This endpoint simulates a transaction with provided hash that is in the mempool.
+      simulateMempoolTransaction:
+        description: This endpoint simulates a transaction with provided hash that
+          is in the mempool.
         function: extension:simulateMempoolTransaction
         trigger:
           type: webhook
           webhook:
             authenticated: false
-
 project_slug: ""

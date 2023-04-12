@@ -4,9 +4,9 @@ actions:
     runtime: v2
     sources: actions
     specs:
-      getChainLinkPriceFeedByCoinPair:
+      chainLinkPriceFeed:
         description: Chainlink price feed from https://docs.chain.link/data-feeds/examples
-        function: extension:getChainLinkPriceFeed
+        function: extension:chainlinkPriceFeed
         trigger:
           type: webhook
           webhook:

@@ -4,7 +4,7 @@ import { isValidNetwork } from './utils/networkHelper';
 import { getContractAddressFromCoinPair, isValidCoinPair } from './utils/priceFeed';
 import aggregatorV3InterfaceABI from './abi/aggregatorV3InterfaceABI.json';
 
-export const getChainLinkPriceFeed: ActionFn = async (context: Context, event: Event) => {
+export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Event) => {
   // Casting the event to a WebhookEvent
   const webhookEvent: WebhookEvent = event as WebhookEvent;
 

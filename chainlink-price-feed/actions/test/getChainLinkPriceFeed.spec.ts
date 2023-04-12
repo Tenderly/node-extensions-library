@@ -1,10 +1,10 @@
 import { Context, Event, Network, WebhookEvent } from '@tenderly/actions';
 import * as dotenv from 'dotenv';
-import { getChainLinkPriceFeed } from '../extension';
+import { chainlinkPriceFeed } from '../extension';
 
 dotenv.config();
 
-describe('getChainLinkPriceFeed', () => {
+describe('chainlinkPriceFeed', () => {
   let context: Context;
   let event: Event;
 
@@ -25,7 +25,7 @@ describe('getChainLinkPriceFeed', () => {
   });
 
   test('Test 1INCH/ETH pair', async () => {
-    const result = await getChainLinkPriceFeed(context, event);
+    const result = await chainlinkPriceFeed(context, event);
     expect(result.data.length).toEqual(5);
   });
 });

@@ -1,6 +1,6 @@
 import {ActionFn, Context, Event, ExtensionEvent} from '@tenderly/actions';
 import { ethers } from 'ethers';
-const { bytecode } = require('./artifacts/solidity/contracts/BatchRequest.sol/BatchRequest.json');
+import {BatchRequestJSON} from "./constants/constants";
 
 const FACTORY = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"; // Pairs deployed: 10000835
 const abi = ["function allPairsLength() external view returns (uint)"];
@@ -46,7 +46,7 @@ export const multicallUniswapERC20Balance: ActionFn = async (context: Context, e
         [i, step, FACTORY]
     );
 
-    const payload = bytecode.concat(inputData.slice(2));
+    const payload = BatchRequestJSON.bytecode.concat(inputData.slice(2));
 
     // Call the deployment transaction
     const returnedData = await provider.call({ data: payload });

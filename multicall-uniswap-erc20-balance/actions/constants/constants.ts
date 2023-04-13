@@ -1,4 +1,5 @@
-{
+
+const BatchRequestJSON = {
   "_format": "hh-sol-artifact-1",
   "contractName": "BatchRequest",
   "sourceName": "solidity/contracts/BatchRequest.sol",
@@ -30,3 +31,9 @@
   "linkReferences": {},
   "deployedLinkReferences": {}
 }
+
+
+
+export {
+  BatchRequestJSON,
+};

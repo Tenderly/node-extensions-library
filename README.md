@@ -13,10 +13,18 @@ Node Extensions are a game-changing enhancement to our existing production node.
 
 > **Note:** Node Extensions require @tenderly/actions version >= **0.2.0**.
 
-## How to use
+## How to Use
 
-Go to the Extensions Library and search for the extension that you want to include in your Web3 Gateway. Click on the extension and click "Activate".
+Go to the **Extensions Library** and search for the extension that you want to include in your Web3 Gateway. Click on the extension and click "Activate".
 Once activated, go to JSON-RPC Request Builder and select your extension method from the dropdown menu. You can then enter the JSON payload and click "Send Request".
+
+### How to Create a Custom Node Extension - Video Tutorial
+
+[![How to Create a Custom Node Extension](http://img.youtube.com/vi/W9Q9vLwoPlo/0.jpg)](https://youtu.be/W9Q9vLwoPlo "How to Create a Custom Node Extension")
+
+### How to Activate an Extension from the Node Extension Library - Video Tutorial
+
+[![How to Activate an Extension from the Node Extension Library](http://img.youtube.com/vi/9inC9pUKr5c/0.jpg)](https://youtu.be/9inC9pUKr5c "How to Activate an Extension from the Node Extension Library")
 
 ## Node Extension Examples
 

@@ -2,7 +2,7 @@ import {ActionFn, Context, Event, ExtensionEvent} from '@tenderly/actions';
 import {ethers} from 'ethers';
 
 export const simulateMempoolTransaction: ActionFn = async (context: Context, event: Event) => {
-    // Casting the event to a WebhookEvent
+    // Casting the event to a ExtensionEvent
     const params: ExtensionEvent = event as ExtensionEvent;
 
     // Setting a variable that will store the Web3 Gateway RPC URL and secret key

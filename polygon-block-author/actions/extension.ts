@@ -10,7 +10,7 @@ const extraSeal = 130
 const errMissingSignature = "extra-data 65 byte signature suffix missing"
 
 export const blockAuthor: ActionFn = async (context: Context, event: Event) => {
-    // Casting the event to a WebhookEvent
+    // Casting the event to a ExtensionEvent
     const webhookEvent: WebhookEvent = event as WebhookEvent;
 
     // Setting a variable that will store the Web3 Gateway RPC URL and secret key

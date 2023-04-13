@@ -1,12 +1,20 @@
-import { ActionFn, Context, Event, WebhookEvent } from '@tenderly/actions';
+import {ActionFn, Context, Event, ExtensionEvent, Network} from '@tenderly/actions';
 import { ethers } from 'ethers';
 
 export const pmSponsorUserOperation: ActionFn = async (context: Context, event: Event) => {
-  // Casting the event to a WebhookEvent
-  const webhookEvent: WebhookEvent = event as WebhookEvent;
+  const chain = context.metadata.getNetwork();
+
+  if (chain != Network.GOERLI) {
+    return Promise.reject({
+      error: `Chain ${chain} not supported, supported chains: goerli`,
+    });
+  }
+
+  // Casting the event to a ExtensionEvent
+  const params: ExtensionEvent = event as ExtensionEvent;
 
   // Getting the block number from the webhook event payload
-  const { chain, userOperation, entryPoint } = webhookEvent.payload;
+  const [userOperation, entryPoint ] = params;
 
   // Getting the Pimlico API key from the secrets
   const PIMLICO_API_KEY = await context.secrets.get('PIMLICO_API_KEY');

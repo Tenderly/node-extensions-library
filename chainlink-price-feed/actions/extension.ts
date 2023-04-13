@@ -5,7 +5,7 @@ import { getContractAddressFromCoinPair, isValidCoinPair } from './utils/priceFe
 import aggregatorV3InterfaceABI from './abi/aggregatorV3InterfaceABI.json';
 
 export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Event) => {
-  // Casting the event to a WebhookEvent
+  // Casting the event to a ExtensionEvent
   const params: ExtensionEvent = event as ExtensionEvent;
 
   // Getting the coin pair and network from the webhook event payload

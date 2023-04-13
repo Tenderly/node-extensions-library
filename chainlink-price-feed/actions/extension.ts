@@ -9,8 +9,10 @@ export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Even
   const params: ExtensionEvent = event as ExtensionEvent;
 
   // Getting the coin pair and network from the webhook event payload
-  const [ coinPair ] = params;
-  const network = context.metadata.getNetwork()
+  const [coinPair] = params;
+
+  // Get the network from the request metadata
+  const network = context.metadata.getNetwork();
 
   // Checking if the network is valid
   if (!isValidNetwork(network)) {
@@ -39,8 +41,26 @@ export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Even
   const priceFeed = new ethers.Contract(contractAddress, aggregatorV3InterfaceABI, provider);
 
   // Get the latest round data
-  const roundData = await priceFeed.latestRoundData();
-  console.log(roundData);
+  const {
+    roundId,
+    answer,
+    startedAt,
+    updatedAt,
+    answeredInRound,
+  } = await priceFeed.latestRoundData();
+  console.log({
+    roundId,
+    answer,
+    startedAt,
+    updatedAt,
+    answeredInRound,
+  });
 
-  return { data: roundData };
+  return {
+    roundId,
+    answer,
+    startedAt,
+    updatedAt,
+    answeredInRound,
+  };
 };

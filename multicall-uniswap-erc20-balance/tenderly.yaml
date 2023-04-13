@@ -5,7 +5,7 @@ actions:
     sources: actions
     specs:
       multicallUniswapERC20Balance:
-        description: multicall uniswap erc20 balance
+        description: This extension uses Wonderland's multicall strategy to fetch Uniswap's ERC20 balance in the range [{{offset}}, {{offset}}+{{limit}}] of all pairs. Multicall optimizes eth_call performance and lower the consumption of the node RPC.
         function: extension:multicallUniswapERC20Balance
         trigger:
           type: webhook

@@ -34,6 +34,8 @@ export const simulateMempoolTransaction: ActionFn = async (context: Context, eve
         to: tx.to,
         gas: tx.gasLimit?._hex,
         gasPrice: tx.gasPrice?._hex,
+        maxPriorityFeePerGas: tx.maxPriorityFeePerGas?._hex,
+        maxFeePerGas: tx.maxFeePerGas?._hex,
         value: tx.value?._hex,
         data: tx.data,
     };

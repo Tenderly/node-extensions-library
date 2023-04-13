@@ -15,7 +15,8 @@ Node Extensions is a game-changing enhancement to our existing production node. 
 
 ## How to use
 
-TBD
+Go to the Extensions Library and search for the extension that you want to include in your Web3 Gateway. Click on the extension and click "Activate".
+Once activated, go to JSON-RPC Request Builder and select your extension method from the dropdown menu. You can then enter the JSON payload and click "Send Request".
 
 ## Node Extension Examples
 

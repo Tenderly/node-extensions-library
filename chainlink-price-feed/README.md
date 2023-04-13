@@ -1,6 +1,6 @@
 # Chainlink Price Feed Extension
 
-Gets the data from the latest round on Chainlink price feed contract given the token pair.
+Gets the data from the latest round on [Chainlink price feed contract](https://docs.chain.link/data-feeds/price-feeds/addresses) given the token pair.
 
 ## Installation
 
@@ -25,7 +25,7 @@ Example:
 {
   "id": "1"
   "jsonrpc": "2.0",
-  "method": "extension_sendRawTransaction",
+  "method": "extension_chainlinkPriceFeed",
   "params": ["USDT/ETH"]
 }
 ```

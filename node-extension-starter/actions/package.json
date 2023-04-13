@@ -1,8 +1,7 @@
 {
     "name": "actions",
     "scripts": {
-        "build": "tsc",
-        "test": "jest"
+        "build": "tsc"
     },
     "dependencies": {
         "@tenderly/actions": "^0.2.0",

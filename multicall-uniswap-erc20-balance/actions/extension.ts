@@ -1,5 +1,5 @@
 import {ActionFn, Context, Event, ExtensionEvent} from '@tenderly/actions';
-import { ethers } from 'hardhat';
+import { ethers } from 'ethers';
 const { bytecode } = require('./artifacts/solidity/contracts/BatchRequest.sol/BatchRequest.json');
 
 const FACTORY = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"; // Pairs deployed: 10000835

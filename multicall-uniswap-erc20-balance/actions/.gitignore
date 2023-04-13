@@ -8,7 +8,6 @@ out/**/*
 
 # Hardhat files
 cache
-artifacts
 typechained
 typechain-types
 deployments/hardhat

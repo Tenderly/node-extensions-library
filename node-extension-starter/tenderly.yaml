@@ -1,6 +1,6 @@
 account_id: ""
 actions:
-  tenderly/extensions-library:
+  node-extensions/node-extensions-library:
     runtime: v2
     sources: actions
     specs:

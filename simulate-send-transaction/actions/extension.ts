@@ -33,10 +33,7 @@ export const sendRawTransaction: ActionFn = async (context: Context, event: Even
 
   // If simulation fails, return error
   if (simulationResponse.status === false) {
-    return Promise.reject({
-      error: 'Simulation failed',
-      simulationResponse,
-    });
+    throw new Error(`simulation failed`);
   }
 
   // If simulation succeeds, send the transaction

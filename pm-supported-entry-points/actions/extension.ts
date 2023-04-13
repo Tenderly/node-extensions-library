@@ -6,9 +6,7 @@ export const pmSupportedEntryPoints: ActionFn = async (context: Context, event: 
   const chain = context.metadata.getNetwork();
 
   if (chain != Network.GOERLI) {
-    return Promise.reject({
-      error: `Chain ${chain} not supported, supported chains: goerli`,
-    });
+    throw new Error(`Chain ${chain} not supported, supported chains: goerli`);
   }
 
   // Getting the Pimlico API key from the Web3 Action Secrets

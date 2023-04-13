@@ -5,9 +5,7 @@ export const pmSponsorUserOperation: ActionFn = async (context: Context, event: 
   const chain = context.metadata.getNetwork();
 
   if (chain != Network.GOERLI) {
-    return Promise.reject({
-      error: `Chain ${chain} not supported, supported chains: goerli`,
-    });
+    throw new Error(`Chain ${chain} not supported, supported chains: goerli`);
   }
 
   // Casting the event to a ExtensionEvent

@@ -25,15 +25,11 @@ export const multicallUniswapERC20Balance: ActionFn = async (context: Context, e
   const pairsLength = await factory.allPairsLength();
 
   if (limit > 1000) {
-    return Promise.reject({
-      error: 'limit exceeds maximum value of 1000',
-    });
+    throw new Error(`limit exceeds maximum value of 1000`);
   }
 
   if ((offset + limit) > pairsLength) {
-    return Promise.reject({
-      error: 'offset + limit exceeds number of pairs length',
-    });
+    throw new Error('offset + limit exceeds number of pairs length');
   }
 
   const values = []

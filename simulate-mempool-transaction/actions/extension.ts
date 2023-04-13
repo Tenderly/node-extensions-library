@@ -16,15 +16,11 @@ export const simulateMempoolTransaction: ActionFn = async (context: Context, eve
     const tx = await provider.send("eth_getTransactionByHash", [txHash])
     // if transaction is not found, return error
     if (tx == null) {
-        return Promise.reject({
-            error: 'Transaction not found',
-        });
+        throw new Error(`transaction not found in the mempool`);
     }
     // if transaction is alrady mined, return error
     if (tx.blockNumber != null) {
-        return Promise.reject({
-            error: 'Transaction mined',
-        });
+        throw new Error(`transaction already mined`);
     }
 
     // Creating a new transaction object with the parsed transaction

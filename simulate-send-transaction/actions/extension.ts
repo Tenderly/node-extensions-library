@@ -1,5 +1,5 @@
 import {ActionFn, Context, Event, ExtensionEvent} from '@tenderly/actions';
-import { ethers } from 'ethers';
+import {BigNumber, ethers} from 'ethers';
 
 export const sendRawTransaction: ActionFn = async (context: Context, event: Event) => {
   // Casting the event to a ExtensionEvent
@@ -22,11 +22,9 @@ export const sendRawTransaction: ActionFn = async (context: Context, event: Even
   const txPayload = {
     from: tx.from,
     to: tx.to,
-    gas: ethers.utils.hexValue(tx.gasLimit?._hex),
-    gasPrice: tx.gasPrice?._hex,
-    maxPriorityFeePerGas: tx.maxPriorityFeePerGas?._hex,
-    maxFeePerGas: tx.maxFeePerGas?._hex,
-    value: ethers.utils.hexValue(tx.value?._hex),
+    gas: hexValue(tx.gasLimit?._hex),
+    gasPrice: hexValue(tx.gasPrice),
+    value: hexValue(tx.value?._hex),
     data: tx.data,
   };
 
@@ -44,3 +42,9 @@ export const sendRawTransaction: ActionFn = async (context: Context, event: Even
   // If simulation succeeds, send the transaction
   return provider.send('eth_sendRawTransaction', params);
 };
+
+const hexValue = (hex? : BigNumber | string): string | undefined => {
+  if (hex == undefined) return undefined
+
+  return ethers.utils.hexValue(hex)
+}

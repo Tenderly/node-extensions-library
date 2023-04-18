@@ -1,12 +1,12 @@
 # Tenderly Node Extension Library
 
-<div style="text-align: center">
+<div align="center">
     <a href="https://dashboard.tenderly.co?redirectTo=node-extensions">
         <img src="https://storage.googleapis.com/tenderly-public-assets/node-extensions/node-extensions.png" alt="tenderly-node-extensions" width="100%" height="auto" style="background-color: #ffffffb2;padding: 10px 20px;box-sizing: border-box;max-width:200px;" />
     </a>
 </div>
 
-<div style="text-align: center">
+<div align="center">
 
 [![License](https://img.shields.io/github/license/Tenderly/node-extensions-library)](./LICENSE)
 [![Twitter](https://img.shields.io/twitter/follow/TenderlyApp?style=social)](https://twitter.com/intent/follow?screen_name=TenderlyApp)
@@ -57,3 +57,13 @@ Here are examples of Node Extensions that you can use in your projects:
 - [polygon-block-author](./polygon-block-author) - Use this Node Extension to get the block author for a given block number on Polygon (Matic) network.
 - [simulate-mempool-transaction](./simulate-mempool-transaction) - This Tenderly Node Extension allows you to simulate a transaction in the mempool.
 - [simulate-send-transaction](./simulate-send-transaction) - This Tenderly Node Extension allows you to simulate a transaction before sending on-chain.
+
+## Contributors
+
+<a href="https://github.com/Tenderly/node-extensions-library/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Tenderly/node-extensions-library&max=100&columns=20" alt="tenderly-contributors" />
+</a>
+
+## License
+
+[MIT](LICENSE)

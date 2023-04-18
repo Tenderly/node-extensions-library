@@ -66,8 +66,8 @@ Our [Code of Conduct](./CODE_OF_CONDUCT.md) applies to all Tenderly community ch
 ## Security
 
 If you believe you have found a security vulnerability in Node Extension Template, we encourage you to responsibly
-disclose this and not open a public issue. We will investigate all legitimate reports. Contact our customer support to
-disclose any security vulnerabilities.
+disclose this and not open a public issue. We will investigate all legitimate reports. Contact our customer support by
+email **support@tenderly.co** to disclose any security vulnerabilities.
 
 ## Contributors
 

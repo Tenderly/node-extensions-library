@@ -1,19 +1,33 @@
 # Tenderly Node Extension Library
 
-<div align="center">
-    <a href="https://tenderly.co">
-        <img src="https://storage.googleapis.com/tenderly-public-assets/node-extensions/node-extensions.png" alt="tenderly-logo" width="100%" height="auto" style="background-color: #ffffffb2;padding: 10px 20px;box-sizing: border-box;max-width:200px;" />
+<div style="text-align: center">
+    <a href="https://dashboard.tenderly.co?redirectTo=node-extensions">
+        <img src="https://storage.googleapis.com/tenderly-public-assets/node-extensions/node-extensions.png" alt="tenderly-node-extensions" width="100%" height="auto" style="background-color: #ffffffb2;padding: 10px 20px;box-sizing: border-box;max-width:200px;" />
     </a>
 </div>
 
+<div style="text-align: center">
+
+[![License](https://img.shields.io/github/license/Tenderly/node-extensions-library)](./LICENSE)
+[![Twitter](https://img.shields.io/twitter/follow/TenderlyApp?style=social)](https://twitter.com/intent/follow?screen_name=TenderlyApp)
+[![Github](https://img.shields.io/github/stars/Tenderly/node-extensions-library?style=social)](https://github.com/Tenderly/node-extensions-library)
+
+</div>
+
+## Introduction
 
 This library is a collection of Tenderly Node Extensions. It’s used to extend Tenderly Web3 Gateway, our Node-as-a-Service, with additional functionalities.
 
 Node Extensions are a game-changing enhancement to our existing production node. This feature allows devs to create custom JSON-RPC method names and write custom JS/TS code snippets that are executed each time the method is called. It’s like having your very own sorcerer’s apprentice working behind the scenes! 🧙‍
 
-> **Note:** Node Extensions require @tenderly/actions version >= **0.2.0**.
+> **Note:** Node Extensions require [@tenderly/actions](https://github.com/Tenderly/tenderly-actions) version >= **0.2.0**.
 
-## How to Use
+## Documentation
+
+Full documentation with detailed instructions can be found here:  
+[Tenderly Node Extensions Docs](https://docs.tenderly.co/web3-gateway/node-extensions)
+
+## Quick Start
 
 Go to the **Extensions Library** and search for the extension that you want to include in your Web3 Gateway. Click on the extension and click "Activate".
 Once activated, go to JSON-RPC Request Builder and select your extension method from the dropdown menu. You can then enter the JSON payload and click "Send Request".

@@ -2,7 +2,7 @@
 
 <div align="center">
     <a href="https://dashboard.tenderly.co?redirectTo=node-extensions">
-        <img src="https://storage.googleapis.com/tenderly-public-assets/node-extensions/node-extensions.png" alt="tenderly-node-extensions" width="100%" height="auto" style="background-color: #ffffffb2;padding: 10px 20px;box-sizing: border-box;max-width:200px;" />
+        <img src="https://storage.googleapis.com/tenderly-public-assets/node-extensions/node-extensions.png" alt="tenderly-node-extensions" width="100%" height="auto" style="background-color: #ffffffb2; padding: 10px 20px; margin-bottom: 20px; box-sizing: border-box; max-width:200px;" />
     </a>
 </div>
 
@@ -22,15 +22,14 @@ Node Extensions are a game-changing enhancement to our existing production node.
 
 > **Note:** Node Extensions require [@tenderly/actions](https://github.com/Tenderly/tenderly-actions) version >= **0.2.0**.
 
-## Documentation
 
-Full documentation with detailed instructions can be found here:  
-[Tenderly Node Extensions Docs](https://docs.tenderly.co/web3-gateway/node-extensions)
-
-## Quick Start
+## Getting Started
 
 Go to the **Extensions Library** and search for the extension that you want to include in your Web3 Gateway. Click on the extension and click "Activate".
 Once activated, go to JSON-RPC Request Builder and select your extension method from the dropdown menu. You can then enter the JSON payload and click "Send Request".
+
+Full documentation with detailed instructions can be found here:  
+[Tenderly Node Extensions Docs](https://docs.tenderly.co/web3-gateway/node-extensions)
 
 ### How to Create a Custom Node Extension - Video Tutorial
 
@@ -58,6 +57,16 @@ Here are examples of Node Extensions that you can use in your projects:
 - [simulate-mempool-transaction](./simulate-mempool-transaction) - This Tenderly Node Extension allows you to simulate a transaction in the mempool.
 - [simulate-send-transaction](./simulate-send-transaction) - This Tenderly Node Extension allows you to simulate a transaction before sending on-chain.
 
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information.
+
+## Security
+
+If you believe you have found a security vulnerability in Node Extension Template, we encourage you to responsibly
+disclose this and not open a public issue. We will investigate all legitimate reports. Contact our customer support to
+disclose any security vulnerabilities.
+
 ## Contributors
 
 <a href="https://github.com/Tenderly/node-extensions-library/graphs/contributors">
@@ -66,4 +75,4 @@ Here are examples of Node Extensions that you can use in your projects:
 
 ## License
 
-[MIT](LICENSE)
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for the details.

@@ -61,6 +61,8 @@ Here are examples of Node Extensions that you can use in your projects:
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information.
 
+Our [Code of Conduct](./CODE_OF_CONDUCT.md) applies to all Tenderly community channels.
+
 ## Security
 
 If you believe you have found a security vulnerability in Node Extension Template, we encourage you to responsibly

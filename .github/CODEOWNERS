@@ -1,0 +1,15 @@
+# Learn how to add code owners here:
+# https://help.github.com/en/articles/about-code-owners
+
+# Tenderly Node Extension Examples in alphabetical order
+
+/chainlink-price-feed @dzimiks
+/multicall-uniswap-erc20-balance @nebojsa94
+/node-extension-starter @dzimiks
+/node-extension-starter-jest @dzimiks
+/pm-can-sponsor-user-operation @dzimiks
+/pm-sponsor-user-operation @dzimiks
+/pm-supported-entry-points @dzimiks
+/polygon-block-author @nebojsa94
+/simulate-mempool-transaction @nebojsa94
+/simulate-send-transaction @dzimiks @nebojsa94

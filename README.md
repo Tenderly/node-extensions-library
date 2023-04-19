@@ -1,7 +1,7 @@
 # Tenderly Node Extension Library
 
 <div align="center">
-    <a href="https://dashboard.tenderly.co?redirectTo=node-extensions">
+    <a href="https://dashboard.tenderly.co/register?redirectTo=node-extensions">
         <img src="https://storage.googleapis.com/tenderly-public-assets/node-extensions/node-extensions.png" alt="tenderly-node-extensions" width="100%" height="auto" style="background-color: #ffffffb2; padding: 10px 20px; margin-bottom: 20px; box-sizing: border-box; max-width:200px;" />
     </a>
 </div>
@@ -25,7 +25,7 @@ Node Extensions are a game-changing enhancement to our existing production node.
 
 ## Getting Started
 
-Go to the **Extensions Library** and search for the extension that you want to include in your Web3 Gateway. Click on the extension and click "Activate".
+Go to the [Node Extensions Library](https://dashboard.tenderly.co/register?redirectTo=node-extensions) and search for the extension that you want to include in your Web3 Gateway. Click on the extension and click "Activate".
 Once activated, go to JSON-RPC Request Builder and select your extension method from the dropdown menu. You can then enter the JSON payload and click "Send Request".
 
 Full documentation with detailed instructions can be found here:  
@@ -33,11 +33,19 @@ Full documentation with detailed instructions can be found here:
 
 ### How to Create a Custom Node Extension - Video Tutorial
 
-[![How to Create a Custom Node Extension](http://img.youtube.com/vi/W9Q9vLwoPlo/0.jpg)](https://youtu.be/W9Q9vLwoPlo "How to Create a Custom Node Extension")
+<div align="center">
+    <a href="https://youtu.be/W9Q9vLwoPlo">
+        <img src="https://img.youtube.com/vi/W9Q9vLwoPlo/maxresdefault.jpg" alt="Tenderly" width="100%" height="auto" style="background-color: #ffffffb2; padding: 10px 20px; margin-bottom: 20px; box-sizing: border-box; max-width:200px;" />
+    </a>
+</div>
 
 ### How to Activate an Extension from the Node Extension Library - Video Tutorial
 
-[![How to Activate an Extension from the Node Extension Library](http://img.youtube.com/vi/9inC9pUKr5c/0.jpg)](https://youtu.be/9inC9pUKr5c "How to Activate an Extension from the Node Extension Library")
+<div align="center">
+    <a href="https://youtu.be/9inC9pUKr5c">
+        <img src="https://img.youtube.com/vi/9inC9pUKr5c/maxresdefault.jpg" alt="Tenderly" width="100%" height="auto" style="background-color: #ffffffb2; padding: 10px 20px; margin-bottom: 20px; box-sizing: border-box; max-width:200px;" />
+    </a>
+</div>
 
 ## Node Extension Examples
 

@@ -46,7 +46,7 @@ export const blockAuthor: ActionFn = async (context: Context, event: Event) => {
     return ethers.utils.recoverAddress(hash, {
         r: "0x" + signature.slice(0, 64),
         s: "0x" + signature.slice(64, 128),
-        v: signature[129] + 27,
+        v: +signature[129] + 27,
     })
 }
 

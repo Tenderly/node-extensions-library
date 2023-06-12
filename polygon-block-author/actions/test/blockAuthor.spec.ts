@@ -1,4 +1,4 @@
-import { Context, Event, Network, WebhookEvent } from '@tenderly/actions';
+import {Context, Event, ExtensionEvent, Network} from '@tenderly/actions';
 import * as dotenv from 'dotenv';
 import { blockAuthor } from '../extension';
 
@@ -15,16 +15,10 @@ describe('borAuthor', () => {
         getNetwork: jest.fn().mockReturnValue(Network.POLYGON)
       },
       gateways: {
-        getGateway: jest.fn().mockReturnValue(`https://polygon-mainnet.gateway.tenderly.co/${process.env.TENDERLY_WEB3_GATEWAY_ACCESS_TOKEN}`),
+        getGateway: jest.fn().mockReturnValue(`https://polygon.gateway.tenderly.co/${process.env.TENDERLY_WEB3_GATEWAY_ACCESS_TOKEN}`),
       },
     };
-    (event as WebhookEvent) = {
-      time: new Date(),
-      payload: {
-        network: Network.MAINNET,
-        data: '0x23320C0',
-      },
-    };
+    (event as ExtensionEvent) = ['0x23320C0'];
   });
 
   test('Test Polygon Block Author', async () => {

@@ -1,4 +1,4 @@
-import {ActionFn, Context, Event, Network, WebhookEvent,} from '@tenderly/actions';
+import {ActionFn, Context, Event, Network, ExtensionEvent,} from '@tenderly/actions';
 import {ethers} from "ethers";
 import {hexZeroPad} from "ethers/lib/utils";
 
@@ -11,7 +11,9 @@ const errMissingSignature = "extra-data 65 byte signature suffix missing"
 
 export const blockAuthor: ActionFn = async (context: Context, event: Event) => {
     // Casting the event to a ExtensionEvent
-    const webhookEvent: WebhookEvent = event as WebhookEvent;
+    const params: ExtensionEvent = event as ExtensionEvent;
+
+    const blockNumber = params[0];
 
     // Setting a variable that will store the Web3 Gateway RPC URL and secret key
     const network = context.metadata.getNetwork();
@@ -31,7 +33,7 @@ export const blockAuthor: ActionFn = async (context: Context, event: Event) => {
     // Using the Ethers.js provider class to call the RPC URL
     const provider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);
 
-    const block = await provider.send("eth_getBlockByNumber", [webhookEvent.payload.data, false])
+    const block = await provider.send("eth_getBlockByNumber", [blockNumber, false])
 
     // Retrieve the signature from the header extra-data
     if (block.extraData.length < extraSeal) {
@@ -44,7 +46,7 @@ export const blockAuthor: ActionFn = async (context: Context, event: Event) => {
     return ethers.utils.recoverAddress(hash, {
         r: "0x" + signature.slice(0, 64),
         s: "0x" + signature.slice(64, 128),
-        v: signature[129] + 27,
+        v: +signature[129] + 27,
     })
 }
 

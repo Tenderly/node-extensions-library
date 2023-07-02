@@ -5,7 +5,7 @@ actions:
     sources: actions
     specs:
       exampleNodeExtensionJest:
-        description: This is an example Node Extension with Jest
+        description: This is an example Node Extension with Jest.
         function: extension:example
         trigger:
           type: webhook

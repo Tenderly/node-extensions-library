@@ -20,16 +20,18 @@ This library is a collection of Tenderly Node Extensions. It’s used to extend 
 
 Node Extensions are a game-changing enhancement to our existing production node. This feature allows devs to create custom JSON-RPC method names and write custom JS/TS code snippets that are executed each time the method is called. It’s like having your very own sorcerer’s apprentice working behind the scenes! 🧙‍
 
-> **Note:** Node Extensions require [@tenderly/actions](https://github.com/Tenderly/tenderly-actions) version >= **0.2.0**.
-
+> ###  **Note:** Node Extensions require [@tenderly/actions](https://github.com/Tenderly/tenderly-actions) version >= **0.2.0**.
 
 ## Getting Started
 
 Go to the [Node Extensions Library](https://dashboard.tenderly.co/register?redirectTo=node-extensions) and search for the extension that you want to include in your Web3 Gateway. Click on the extension and click "Activate".
 Once activated, go to JSON-RPC Request Builder and select your extension method from the dropdown menu. You can then enter the JSON payload and click "Send Request".
 
-Full documentation with detailed instructions can be found here:  
-[Tenderly Node Extensions Docs](https://docs.tenderly.co/web3-gateway/node-extensions)
+List of the supported networks can be found here:
+[Tenderly Web3 Gateway Supported Networks](https://docs.tenderly.co/supported-networks-and-languages).
+
+Full documentation with detailed instructions can be found here:
+[Tenderly Node Extensions Docs](https://docs.tenderly.co/web3-gateway/node-extensions).
 
 ### How to Create a Custom Node Extension - Video Tutorial
 
@@ -51,8 +53,8 @@ Full documentation with detailed instructions can be found here:
 
 To get started creating your own node extensions, you can use the following Node Extension Starter Pack:
 
-- [node-extension-starter](./node-extension-starter) - This Node Extension gets the current block number.
-- [node-extension-starter-jest](./node-extension-starter-jest) - This Node Extension gets the current block number and has the Jest testing library installed.
+- [node-extension-starter](./node-extension-starter) - This Node Extension gets the block from the network, where the `result.transactions` is a list of transaction hashes.
+- [node-extension-starter-jest](./node-extension-starter-jest) - This Node Extension gets the block from the network, where the `result.transactions` is a list of transaction hashes and has the Jest testing library installed.
 
 Here are examples of Node Extensions that you can use in your projects:
 

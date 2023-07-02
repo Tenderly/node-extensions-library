@@ -7,10 +7,14 @@ extension will throw for non-Polygon networks.
 
 Go to the Extensions Library and search for "polygonBlockAuthor". Click on the extension and click "Activate".
 
+![image](https://github.com/Tenderly/node-extensions-library/assets/26412515/85579a9e-3d2d-437e-9da7-3bc9c5fcbfb5)
+
 ## Usage
 
 Go to JSON-RPC Request Builder and select "Polygon Block Author" from the dropdown menu. You can then enter the JSON
 payload and click "Send Request".
+
+![image](https://github.com/Tenderly/node-extensions-library/assets/26412515/05992ce4-e96a-4f89-bc55-da5251695f20)
 
 ## Method
 

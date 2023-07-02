@@ -7,9 +7,13 @@ Supported networks are Ethereum Mainnet, Sepolia Testnet, Goerli Testnet, Polygo
 
 Go to the Extensions Library and search for "Chainlink Price Feed". Click on the extension and click "Activate".
 
+![node-extension-library](https://github.com/Tenderly/node-extensions-library/assets/26412515/d3b4e93e-d272-4be8-8193-f95010ae163e)
+
 ## Usage
 
 Go to JSON-RPC Request Builder and select "Chainlink Price Feed" from the dropdown menu. You can then enter the JSON payload and click "Send Request".
+
+![image](https://github.com/Tenderly/node-extensions-library/assets/26412515/f19f64b2-bf3c-4d5b-b006-bfd6a5011a1d)
 
 ## Method
 

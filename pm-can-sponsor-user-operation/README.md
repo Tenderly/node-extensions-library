@@ -2,9 +2,13 @@
 
 This function checks whether Pimlico's Paymaster service can sponsor a User Operation on behalf of a third-party dapp.
 
+To use this endpoint, you must have an API key with [Pimlico](https://pimlico.io).
+
 Note: this endpoint will usually return an empty string as a result, as at this stage only a small minority of
-transactions have third parties willing to sponsor them. If you are a Dapp and interested in sponsoring User Operations
-on behalf of ERC-4337 wallet users, please get in touch!
+transactions have third parties willing to sponsor them.
+
+If you are a Dapp and interested in sponsoring User Operations on behalf of ERC-4337 wallet users, please contact us at
+kristof@pimlico.io or [@kristofgazso](https://t.me/kristofgazso) on Telegram to sign up.
 
 More info can be found here: https://docs.pimlico.io/reference/pm_cansponsoruseroperation.
 

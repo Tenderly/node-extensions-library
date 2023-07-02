@@ -14,7 +14,7 @@ export const pmCanSponsorUserOperation: ActionFn = async (context: Context, even
   // Casting the event to a ExtensionEvent
   const params: ExtensionEvent = event as ExtensionEvent;
 
-  // Getting the block number from the node extension event payload
+  // Getting the params from the node extension event payload
   const [userOperation, entryPoint, referralAddress] = params;
 
   // Getting the Pimlico API key from the secrets

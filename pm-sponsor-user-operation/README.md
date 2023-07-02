@@ -1,14 +1,26 @@
 # PM Sponsor User Operation Node Extension
 
-This function asks Pimlico's paymaster to sponsor the submitted User Operation on behalf of the wallet.
+Pimlico's verifying paymasters allows you to sponsor User Operations on-chain with our paymaster contract. We then
+deduct from your Pimlico balance off-chain.
 
-To use this endpoint, the wallet must have a plan with us. Please contact us at kristof@pimlico.io or @kristofgazso on telegram to sign up.
+To use this endpoint, you must have an API key with [Pimlico](https://pimlico.io).
 
-Note: This function does not check whether the User Operation is will be valid when called on-chain, and will sign anything that is well formed.
+User Operations sponsored using `pm_sponsorUserOperation` have a 10-minute time window during which they must be included.
+After this time window elapses, all unused gas will be refunded to your Pimlico balance.
+
+This time limit is necessary in order to avoid DoS attacks, as leaving an infinite time window would allow potential
+attackers to accumulate User Operations and drain Pimlico's paymaster all in one go, requiring us to maintain enough
+balance to cover all possible User Operations we ever signed up to sponsor in the entire history of the paymaster.
+
+If you require a longer time window for your User Operations, please contact us at kristof@pimlico.io
+or [@kristofgazso](https://t.me/kristofgazso) on Telegram to sign up.
+
+More info can be found here: https://docs.pimlico.io/reference/pm_sponsoruseroperation.
 
 ## Installation
 
-More info https://docs.pimlico.io/docs/wallets/api#pm_sponsoruseroperation.
+Go to the Extensions Library and search for "pmSponsorUserOperation". Click on the extension and click
+"Activate".
 
 ## Usage
 
@@ -45,18 +57,18 @@ Example:
     {
       "sender": "0x1234567890123456789012345678901234567890",
       "nonce": "0x1",
-      "initCode": "",
-      "callData": "",
+      "initCode": "0x",
+      "callData": "0x",
       "callGasLimit": "0x100000",
       "verificationGasLimit": "0x20000",
       "preVerificationGas": "0x10000",
       "maxFeePerGas": "0x3b9aca00",
       "maxPriorityFeePerGas": "0x3b9aca00",
-      "paymasterAndData": "",
-      "signature": ""
+      "paymasterAndData": "0x",
+      "signature": "0x"
     },
     {
-      "entryPoint": "0x0987654321098765432109876543210987654321"
+      "entryPoint": "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789"
     }
   ],
   "id": "1"
@@ -73,7 +85,7 @@ Example:
 {
   "jsonrpc": "2.0",
   "result": {
-    "paymasterAndData": "0xbcd12340a2109876543210987654301098765432198765432"
+    "paymasterAndData": "0x0e3439e8f1c17d8d2baa7338a880a1dc8b4951530000000000000000000000000000000000000000000000000000000064a1ac1b0000000000000000000000000000000000000000000000000000000000000000add1d309057170d3d7ae2bf48b0596796b62e59d2a157a8469b9ce73bf176e682f9636b6e14aecb7ea5caf9c9a91ac0894cba66c027b98f1e934601f4938ef781b"
   },
   "id": "1"
 }

@@ -9,7 +9,7 @@ export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Even
   // Casting the event to a ExtensionEvent
   const params: ExtensionEvent = event as ExtensionEvent;
 
-  // Getting the coin pair and network from the webhook event payload
+  // Getting the coin pair from the extension event payload
   const [coinPair] = params;
 
   // Get the network from the request metadata

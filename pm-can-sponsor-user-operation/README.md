@@ -1,10 +1,17 @@
 # PM Can Sponsor User Operation Node Extension
 
-This function checks whether a User Operation can be sponsored by Pimlico's Paymaster service on behalf of a third-party dapp.
+This function checks whether Pimlico's Paymaster service can sponsor a User Operation on behalf of a third-party dapp.
+
+Note: this endpoint will usually return an empty string as a result, as at this stage only a small minority of
+transactions have third parties willing to sponsor them. If you are a Dapp and interested in sponsoring User Operations
+on behalf of ERC-4337 wallet users, please get in touch!
+
+More info can be found here: https://docs.pimlico.io/reference/pm_cansponsoruseroperation.
 
 ## Installation
 
-More info https://docs.pimlico.io/docs/wallets/api/#pm_cansponsoruseroperation.
+Go to the Extensions Library and search for "pmCanSponsorUserOperation". Click on the extension and click
+"Activate".
 
 ## Usage
 
@@ -42,18 +49,18 @@ Example:
     {
       "sender": "0x1234567890123456789012345678901234567890",
       "nonce": "0x1",
-      "initCode": "",
-      "callData": "",
+      "initCode": "0x",
+      "callData": "0x",
       "callGasLimit": "0x100000",
       "verificationGasLimit": "0x20000",
       "preVerificationGas": "0x10000",
       "maxFeePerGas": "0x3b9aca00",
       "maxPriorityFeePerGas": "0x3b9aca00",
-      "paymasterAndData": "",
-      "signature": ""
+      "paymasterAndData": "0x",
+      "signature": "0x"
     },
     {
-      "entryPoint": "0x0987654321098765432109876543210987654321"
+      "entryPoint": "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789"
     },
     {
       "referralAddress": "0x2109876543210987654301098765432198765432"

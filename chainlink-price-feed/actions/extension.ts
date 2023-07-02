@@ -1,7 +1,8 @@
-import { ActionFn, Context, Event, ExtensionEvent } from '@tenderly/actions';
+import { ActionFn, Context, Event, ExtensionEvent, Network } from '@tenderly/actions';
 import { ethers } from 'ethers';
 import { isValidNetwork } from './utils/networkHelper';
 import { getContractAddressFromCoinPair, isValidCoinPair } from './utils/priceFeed';
+import { INVALID_COIN_PAIR_MESSAGE, INVALID_NETWORK_MESSAGE } from './constants/constants';
 import aggregatorV3InterfaceABI from './abi/aggregatorV3InterfaceABI.json';
 
 export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Event) => {
@@ -12,33 +13,33 @@ export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Even
   const [coinPair] = params;
 
   // Get the network from the request metadata
-  const network = context.metadata.getNetwork();
+  const network: Network | undefined = context.metadata.getNetwork();
 
   // Checking if the network is valid
   if (!isValidNetwork(network)) {
-    throw new Error('Invalid network. Supported networks are Ethereum Mainnet, Sepolia Testnet & Goerli Testnet');
+    throw new Error(INVALID_NETWORK_MESSAGE);
   }
 
   // Checking if the coin pair is valid
   if (!isValidCoinPair(coinPair)) {
-    throw new Error('Invalid coin pair. The coin pair should be in the format of coin1/coin2, e.g. BTC/USD.');
+    throw new Error(INVALID_COIN_PAIR_MESSAGE);
   }
 
   // Setting a variable that will store the Web3 Gateway RPC URL and secret key
-  const defaultGatewayURL = context.gateways.getGateway();
+  const defaultGatewayURL: string = context.gateways.getGateway();
 
   // Using the Ethers.js provider class to call the RPC URL
-  const provider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);
+  const provider: ethers.providers.JsonRpcProvider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);
 
   // Getting the contract address from the coin pair
-  const contractAddress = getContractAddressFromCoinPair(coinPair, network);
+  const contractAddress: string | null = getContractAddressFromCoinPair(coinPair, network);
 
   if (!contractAddress) {
     throw new Error(`No contract address found for the coin pair ${coinPair} on the ${network} network.`);
   }
 
   // Create a new contract instance
-  const priceFeed = new ethers.Contract(contractAddress, aggregatorV3InterfaceABI, provider);
+  const priceFeed: ethers.Contract = new ethers.Contract(contractAddress, aggregatorV3InterfaceABI, provider);
 
   // Get the latest round data
   const {
@@ -48,6 +49,9 @@ export const chainlinkPriceFeed: ActionFn = async (context: Context, event: Even
     updatedAt,
     answeredInRound,
   } = await priceFeed.latestRoundData();
+
+  // Print the values.
+  // They can be seen in the Web3 Action execution logs.
   console.log({
     roundId,
     answer,

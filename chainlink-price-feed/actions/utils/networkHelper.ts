@@ -8,7 +8,9 @@ const isValidNetwork = (network?: Network): boolean => {
   return (
     network === Network.MAINNET ||
     network === Network.GOERLI ||
-    network === Network.SEPOLIA
+    network === Network.SEPOLIA ||
+    network === Network.POLYGON ||
+    network === Network.MUMBAI
   );
 };
 

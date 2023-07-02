@@ -1,6 +1,7 @@
 # Chainlink Price Feed Extension
 
 Gets the data from the latest round on [Chainlink price feed contract](https://docs.chain.link/data-feeds/price-feeds/addresses) given the token pair.
+Supported networks are Ethereum Mainnet, Sepolia Testnet, Goerli Testnet, Polygon Mainnet & Polygon Mumbai.
 
 ## Installation
 
@@ -23,7 +24,7 @@ Parameters
 Example:
 ```json
 {
-  "id": "1"
+  "id": 0,
   "jsonrpc": "2.0",
   "method": "extension_chainlinkPriceFeed",
   "params": ["USDT/ETH"]
@@ -37,7 +38,7 @@ See results from latestRoundData - https://docs.chain.link/data-feeds/api-refere
 Example:
 ```json
 {
-  "id":0,
+  "id": 0,
   "jsonrpc": "2.0",
   "result": {
     "roundId": "0x400000000000023E7",

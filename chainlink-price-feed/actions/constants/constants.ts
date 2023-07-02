@@ -1,5 +1,8 @@
 import { Chain } from '../types';
 
+const INVALID_COIN_PAIR_MESSAGE: string = 'Invalid coin pair. The coin pair should be in the format of coin1/coin2, e.g. BTC/USD.';
+const INVALID_NETWORK_MESSAGE: string = 'Invalid network. Supported networks are Ethereum Mainnet, Sepolia Testnet, Goerli Testnet, Polygon Mainnet & Polygon Mumbai.';
+
 const CHAINS: Chain[] = [
   // Ethereum
   {
@@ -7,7 +10,7 @@ const CHAINS: Chain[] = [
     title: 'Data Feeds',
     img: '/assets/chains/ethereum.svg',
     networkStatusUrl: 'https://ethstats.dev/',
-    tags: ['default', 'proofOfReserve', 'nftFloorPrice'],
+    tags: ['default', 'proofOfReserve', 'nftFloorPrice', 'rates'],
     networks: [
       {
         name: 'Ethereum Mainnet',
@@ -21,13 +24,14 @@ const CHAINS: Chain[] = [
         explorerUrl: 'https://sepolia.etherscan.io/address/%s',
         networkType: 'testnet',
         rddUrl: 'https://reference-data-directory.vercel.app/feeds-ethereum-testnet-sepolia.json',
+        tags: ['rates'],
       },
       {
         name: 'Goerli Testnet',
         explorerUrl: 'https://goerli.etherscan.io/address/%s',
         networkType: 'testnet',
-        tags: ['proofOfReserve', 'nftFloorPrice'],
         rddUrl: 'https://reference-data-directory.vercel.app/feeds-goerli.json',
+        tags: ['proofOfReserve', 'nftFloorPrice'],
       },
     ],
     label: 'Ethereum',
@@ -39,20 +43,21 @@ const CHAINS: Chain[] = [
     label: 'Polygon (Matic)',
     img: '/assets/chains/polygon.svg',
     networkStatusUrl: 'https://polygon.io/system',
-    tags: ['default', 'proofOfReserve'],
+    tags: ['default', 'proofOfReserve', 'nftFloorPrice', 'rates'],
     networks: [
       {
         name: 'Polygon Mainnet',
         explorerUrl: 'https://polygonscan.com/address/%s',
         networkType: 'mainnet',
-        tags: ['proofOfReserve'],
         rddUrl: 'https://reference-data-directory.vercel.app/feeds-matic-mainnet.json',
+        tags: ['proofOfReserve'],
       },
       {
         name: 'Mumbai Testnet',
         explorerUrl: 'https://mumbai.polygonscan.com/address/%s',
         networkType: 'testnet',
         rddUrl: 'https://reference-data-directory.vercel.app/feeds-matic-testnet.json',
+        tags: ['nftFloorPrice', 'rates'],
       },
     ],
   },
@@ -60,4 +65,6 @@ const CHAINS: Chain[] = [
 
 export {
   CHAINS,
+  INVALID_COIN_PAIR_MESSAGE,
+  INVALID_NETWORK_MESSAGE,
 };

@@ -34,7 +34,7 @@ interface ChainMetadata {
   transmissionsAccount: null | string;
 }
 
-type ChainTags = ('default' | 'proofOfReserve' | 'nftFloorPrice')[]
+type ChainTags = ('default' | 'proofOfReserve' | 'nftFloorPrice' | 'rates')[];
 
 interface ChainNetwork {
   name: string;

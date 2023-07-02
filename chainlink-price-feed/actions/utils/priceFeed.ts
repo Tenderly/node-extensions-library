@@ -1,10 +1,14 @@
 import { Chain, ChainMetadata, ChainNetwork } from '../types';
 import { Network } from '@tenderly/actions';
 import { isValidNetwork } from './networkHelper';
+import { INVALID_COIN_PAIR_MESSAGE, INVALID_NETWORK_MESSAGE } from '../constants/constants';
 
-import feedsMainnet from '../data/feeds-ethereum-mainnet.json';
-import feedsSepolia from '../data/feeds-ethereum-testnet-sepolia.json';
-import feedsGoerli from '../data/feeds-ethereum-testnet-goerli.json';
+// ChainLink price feeds
+import feedsEthereumMainnet from '../data/feeds-ethereum-mainnet.json';
+import feedsEthereumSepolia from '../data/feeds-ethereum-testnet-sepolia.json';
+import feedsEthereumGoerli from '../data/feeds-ethereum-testnet-goerli.json';
+import feedsMaticMainnet from '../data/feeds-matic-mainnet.json';
+import feedsMaticTestnet from '../data/feeds-matic-testnet.json';
 
 // Check if both parts are non-empty and consist only of uppercase letters
 const isValidCoin = (coin: string) => /^[0-9A-Z]+$/.test(coin);
@@ -26,34 +30,37 @@ const isValidCoinPair = (input: string): boolean => {
 
 const getPriceFeedByNetwork = (network?: Network): ChainMetadata[] => {
   if (!isValidNetwork(network)) {
-    throw new Error('Invalid network. Supported networks are Ethereum Mainnet, Sepolia Testnet & Goerli Testnet');
+    throw new Error(INVALID_NETWORK_MESSAGE);
   }
 
-  if (network === Network.MAINNET) {
-    // @ts-ignore
-    return feedsMainnet;
+  switch (network) {
+    case Network.MAINNET:
+      // @ts-ignore
+      return feedsEthereumMainnet;
+    case Network.SEPOLIA:
+      // @ts-ignore
+      return feedsEthereumSepolia;
+    case Network.GOERLI:
+      // @ts-ignore
+      return feedsEthereumGoerli;
+    case Network.POLYGON:
+      // @ts-ignore
+      return feedsMaticMainnet;
+    case Network.MUMBAI:
+      // @ts-ignore
+      return feedsMaticTestnet;
+    default:
+      return [];
   }
-
-  if (network === Network.SEPOLIA) {
-    // @ts-ignore
-    return feedsSepolia;
-  }
-
-  if (network === Network.GOERLI) {
-    // @ts-ignore
-    return feedsGoerli;
-  }
-
-  return [];
 };
 
 const getContractAddressFromCoinPair = (coinPair: string, network?: Network): string | null => {
   if (!isValidNetwork(network)) {
-    throw new Error('Invalid network. Supported networks are Ethereum Mainnet, Sepolia Testnet & Goerli Testnet');
+    throw new Error(INVALID_NETWORK_MESSAGE);
   }
 
   if (!isValidCoinPair(coinPair)) {
-    throw new Error('Invalid coin pair. The coin pair should be in the format of coin1/coin2, e.g. BTC/USD.');
+    throw new Error(INVALID_COIN_PAIR_MESSAGE);
   }
 
   // Remove extra spaces from the input and split it by the '/'

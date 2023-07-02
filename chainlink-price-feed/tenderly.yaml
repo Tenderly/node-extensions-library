@@ -5,7 +5,7 @@ actions:
     sources: actions
     specs:
       chainlinkPriceFeed:
-        description: Chainlink price feed from https://docs.chain.link/data-feeds/examples
+        description: Gets the data from the latest round on Chainlink price feed contract given the token pair.
         function: extension:chainlinkPriceFeed
         trigger:
           type: webhook

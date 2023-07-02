@@ -55,6 +55,33 @@
   },
   {
     "compareOffchain": "",
+    "contractAddress": "0x0e742fb8618f0aDa6b4aBD1f48CDdc742eDE2030",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "cspx-usd",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 86400,
+    "history": false,
+    "multiply": "100000000",
+    "name": "CSPX / USD",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "cspx-usd",
+    "proxyAddress": "0x4b531A318B0e44B549F3b2f824721b3D0d51930A",
+    "threshold": 2,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {},
+    "decimals": 8
+  },
+  {
+    "compareOffchain": "",
     "contractAddress": "0x17Dac87b07EAC97De4E182Fc51C925ebB7E723e2",
     "contractType": "",
     "contractVersion": 4,
@@ -104,8 +131,101 @@
     "assetName": "",
     "feedCategory": "",
     "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "IRC",
+      "productType": "Rates"
+    },
+    "decimals": 8
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0x1BD8f3005eA38E52D5d6881D60747a130D1BEc94",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "btcusd-7day-realized-volatility",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "100000",
+    "name": "BTC-USD 7-Day Realized Volatility",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "btc-usd-realvol7day",
+    "proxyAddress": "0x88163626786Ee98AA1De65BD2A76599e71598FD9",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Realized Volatility",
+      "productType": "Price"
+    },
+    "decimals": 5
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0x234a5fb5Bd614a7AA2FfAB244D603abFA0Ac5C5C",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "ib01-usd",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 86400,
+    "history": false,
+    "multiply": "100000000",
+    "name": "IB01 / USD",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "ib01-usd",
+    "proxyAddress": "0xB677bfBc9B09a3469695f40477d05bc9BcB15F50",
+    "threshold": 2,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
     "docs": {},
     "decimals": 8
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0x2562b98a4f0f69147d37ad288fE29Aa28172357f",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "90day-eth-apr",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 86400,
+    "history": false,
+    "multiply": "10000000",
+    "name": "90-Day ETH APR",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "eth-apr-90",
+    "proxyAddress": "0x7422A64372f95F172962e2C0f371E0D9531DF276",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Staking",
+      "productType": "Rates"
+    },
+    "decimals": 7
   },
   {
     "compareOffchain": "",
@@ -190,6 +310,99 @@
   },
   {
     "compareOffchain": "",
+    "contractAddress": "0x4E79ea955A5C841D9423832612Ed1622D98c8E35",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "linkusd-7day-realized-volatility",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "100000",
+    "name": "LINK-USD 7-Day Realized Volatility",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "link-usd-realvol7day",
+    "proxyAddress": "0x03121C1a9e6b88f56b27aF5cc065ee1FaF3CB4A9",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Realized Volatility",
+      "productType": "Price"
+    },
+    "decimals": 5
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0x5961A8fd5933d3A6601d9ab4f792ef7C39794d26",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "ethusd-30day-realized-volatility",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "100000",
+    "name": "ETH-USD 30-Day Realized Volatility",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "eth-usd-realvol30day",
+    "proxyAddress": "0x8e604308BD61d975bc6aE7903747785Db7dE97e2",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Realized Volatility",
+      "productType": "Price"
+    },
+    "decimals": 5
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0x5981BCc667e6DC7490E87cbdC07900DfE891aFD6",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "ethusd-7day-realized-volatility",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "100000",
+    "name": "ETH-USD 7-Day Realized Volatility",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "eth-usd-realvol7day",
+    "proxyAddress": "0xF3140662cE17fDee0A6675F9a511aDbc4f394003",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Realized Volatility",
+      "productType": "Price"
+    },
+    "decimals": 5
+  },
+  {
+    "compareOffchain": "",
     "contractAddress": "0x5A2734CC0341ea6564dF3D00171cc99C63B1A7d3",
     "contractType": "",
     "contractVersion": 4,
@@ -214,6 +427,68 @@
     "feedType": "",
     "docs": {},
     "decimals": 8
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0x64d269124dAecCa65BCC9F47F8b4F0C2FA0E4FCa",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "btcusd-24hr-realized-volatility",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "100000",
+    "name": "BTC-USD 24hr Realized Volatility",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "btc-usd-realvol1day",
+    "proxyAddress": "0x28f9134a15cf0aAC9e1F0CD09E17f32925254C77",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Realized Volatility",
+      "productType": "Price"
+    },
+    "decimals": 5
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0x655C25E9e5a8a75f08D0c4D984AdaAdE84656892",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "ethusd-24hr-realized-volatility",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "100000",
+    "name": "ETH-USD 24hr Realized Volatility",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "eth-usd-realvol1day",
+    "proxyAddress": "0x31D04174D0e1643963b38d87f26b0675Bb7dC96e",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Realized Volatility",
+      "productType": "Price"
+    },
+    "decimals": 5
   },
   {
     "compareOffchain": "",
@@ -271,6 +546,37 @@
   },
   {
     "compareOffchain": "",
+    "contractAddress": "0x7D8EfFB01A48188d4e004B560216333dB6b8Db27",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "btcusd-30day-realized-volatility",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "100000",
+    "name": "BTC-USD 30-Day Realized Volatility",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "btc-usd-realvol30day",
+    "proxyAddress": "0xabfe1e28F54Ac40776DfCf2dF0874D37254D5F59",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Realized Volatility",
+      "productType": "Price"
+    },
+    "decimals": 5
+  },
+  {
+    "compareOffchain": "",
     "contractAddress": "0x8F838e52B80065b64F9538cF14De4130D88233c9",
     "contractType": "",
     "contractVersion": 4,
@@ -293,7 +599,11 @@
     "assetName": "",
     "feedCategory": "",
     "feedType": "",
-    "docs": {},
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "IRC",
+      "productType": "Rates"
+    },
     "decimals": 8
   },
   {
@@ -352,6 +662,68 @@
   },
   {
     "compareOffchain": "",
+    "contractAddress": "0xBD3cf0422AC029F46F12a3dCfB9bc0d90a7665d8",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "30day-eth-apr",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 86400,
+    "history": false,
+    "multiply": "10000000",
+    "name": "30-Day ETH APR",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "eth-apr-30",
+    "proxyAddress": "0xceA6Aa74E6A86a7f85B571Ce1C34f1A60B77CD29",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Staking",
+      "productType": "Rates"
+    },
+    "decimals": 7
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0xD1F6d87763a328b736cd771f059c187879fc66B1",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "linkusd-30day-realized-volatility",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "100000",
+    "name": "LINK-USD 30-Day Realized Volatility",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "link-usd-realvol30day",
+    "proxyAddress": "0xd599cEF88Bbd27F1392A544bD0F343ec8893124C",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Realized Volatility",
+      "productType": "Price"
+    },
+    "decimals": 5
+  },
+  {
+    "compareOffchain": "",
     "contractAddress": "0xD404D68e5616e9C7045be2Dc1C5865EE328B6638",
     "contractType": "",
     "contractVersion": 4,
@@ -397,6 +769,68 @@
     "path": "birc-2w",
     "proxyAddress": "0x39545d0c11CD62d787bB971B6a802150e1f54D8f",
     "threshold": 0.01,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "IRC",
+      "productType": "Rates"
+    },
+    "decimals": 8
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0xE615c3521b2eB75CfCeD2AeC8388C91f09799fc6",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "linkusd-24hr-realized-volatility",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "100000",
+    "name": "LINK-USD 24hr Realized Volatility",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "link-usd-realvol1day",
+    "proxyAddress": "0xfD59B51F25E0Ab790a4F0c483BaC194FA0479D29",
+    "threshold": 50,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "assetClass": "Crypto",
+      "productSubType": "Realized Volatility",
+      "productType": "Price"
+    },
+    "decimals": 5
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0xEAc832f439F19B8b7D32C35517fFEd84dd1C4f72",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "ibta-usd",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 86400,
+    "history": false,
+    "multiply": "100000000",
+    "name": "IBTA / USD",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "ibta-usd",
+    "proxyAddress": "0x5c13b249846540F81c093Bc342b5d963a7518145",
+    "threshold": 2,
     "valuePrefix": "",
     "assetName": "",
     "feedCategory": "",

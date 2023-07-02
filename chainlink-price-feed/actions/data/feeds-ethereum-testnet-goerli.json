@@ -296,6 +296,64 @@
   },
   {
     "compareOffchain": "",
+    "contractAddress": "0x44184dA04f6CdcfDC7050A6332d1d286988EF66E",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "ethx-liquid-staking-balance-por",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "1000000000000000000",
+    "name": "ETHx Liquid Staking Balance PoR",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "ethx-liquid-staking-balance-por",
+    "proxyAddress": "0xe69BA7C8177bF69B7EE4b4C8a2DA1B52C9c15B8B",
+    "threshold": 0.5,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "hidden": true
+    },
+    "decimals": 18
+  },
+  {
+    "compareOffchain": "",
+    "contractAddress": "0x53d97Cc97B17EE24D1B3D9E23706a0F845cBB12a",
+    "contractType": "",
+    "contractVersion": 4,
+    "decimalPlaces": null,
+    "ens": "ethx-supply",
+    "formatDecimalPlaces": null,
+    "healthPrice": "",
+    "heartbeat": 3600,
+    "history": false,
+    "multiply": "1000000000000000000",
+    "name": "ETHx Supply",
+    "pair": [
+      "",
+      ""
+    ],
+    "path": "ethx-supply-por",
+    "proxyAddress": "0xD3e3Cf81fA419e0937c39ac2A86E74E24559c499",
+    "threshold": 0.5,
+    "valuePrefix": "",
+    "assetName": "",
+    "feedCategory": "",
+    "feedType": "",
+    "docs": {
+      "hidden": true
+    },
+    "decimals": 18
+  },
+  {
+    "compareOffchain": "",
     "contractAddress": "0x55aeb80Aa6Ab34aA83E1F387903F8Bb2Aa9e2F2d",
     "contractType": "",
     "contractVersion": 4,
@@ -406,9 +464,9 @@
     "feedType": "Crypto",
     "docs": {
       "assetName": "Optimism Health Sequencer Flag",
-      "hidden": true,
       "feedCategory": "custom",
-      "feedType": "Crypto"
+      "feedType": "Crypto",
+      "hidden": true
     },
     "decimals": 0
   },
@@ -433,10 +491,17 @@
     "proxyAddress": "0xcd3BBd46c6c6354e3B03780F99E9836d3AC7740b",
     "threshold": 1e-7,
     "valuePrefix": "",
-    "assetName": "",
+    "assetName": "Ethereum LSD",
     "feedCategory": "",
-    "feedType": "",
-    "docs": {},
+    "feedType": "Crypto",
+    "docs": {
+      "assetName": "Ethereum LSD",
+      "feedType": "Crypto",
+      "porAuditor": "Cross-chain",
+      "porSource": "Wallet address",
+      "porType": "Cross-chain",
+      "productType": "Proof of Reserve"
+    },
     "decimals": 18
   },
   {
@@ -861,9 +926,9 @@
     "feedType": "Crypto",
     "docs": {
       "assetName": "Arbitrum Health Sequencer Flag",
-      "hidden": true,
       "feedCategory": "custom",
-      "feedType": "Crypto"
+      "feedType": "Crypto",
+      "hidden": true
     },
     "decimals": 0
   },

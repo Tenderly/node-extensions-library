@@ -1,4 +1,4 @@
-import {Context, Event, ExtensionEvent, Network} from '@tenderly/actions';
+import { Context, Event, ExtensionEvent, Network } from '@tenderly/actions';
 import * as dotenv from 'dotenv';
 import { chainlinkPriceFeed } from '../extension';
 
@@ -12,19 +12,21 @@ describe('chainlinkPriceFeed', () => {
     // @ts-ignore
     context = {
       metadata: {
-        getNetwork: jest.fn().mockReturnValue(Network.MAINNET)
+        getNetwork: jest.fn().mockReturnValue(Network.MAINNET),
       },
       gateways: {
         getGateway: jest.fn().mockReturnValue(`https://mainnet.gateway.tenderly.co/${process.env.TENDERLY_WEB3_GATEWAY_ACCESS_TOKEN}`),
       },
     };
-    (event as ExtensionEvent) = [
-      "1INCH/ETH"
-    ]
+    (event as ExtensionEvent) = ['1INCH/ETH'];
   });
 
   test('Test 1INCH/ETH pair', async () => {
     const result = await chainlinkPriceFeed(context, event);
-    expect(result.data.length).toEqual(5);
+    expect('roundId' in result).toBeTruthy();
+    expect('answer' in result).toBeTruthy();
+    expect('startedAt' in result).toBeTruthy();
+    expect('updatedAt' in result).toBeTruthy();
+    expect('answeredInRound' in result).toBeTruthy();
   });
 });

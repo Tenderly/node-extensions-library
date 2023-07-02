@@ -5,11 +5,10 @@ actions:
     sources: actions
     specs:
       polygonBlockAuthor:
-        description: Returns block author for Polygon networks.
+        description: Returns address of the block author for Polygon networks.
         function: extension:blockAuthor
         trigger:
           type: webhook
           webhook:
             authenticated: false
-
 project_slug: ""

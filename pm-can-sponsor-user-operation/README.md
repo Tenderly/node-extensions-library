@@ -47,8 +47,9 @@ Parameters:
 Example:
 ```json
 {
+  "id": 0,
   "jsonrpc": "2.0",
-  "method": "eth_canSponsorUserOperation",
+  "method": "extension_pmCanSponsorUserOperation",
   "params": [
     {
       "sender": "0x1234567890123456789012345678901234567890",
@@ -69,8 +70,7 @@ Example:
     {
       "referralAddress": "0x2109876543210987654301098765432198765432"
     }
-  ],
-  "id": "1"
+  ]
 }
 ```
 
@@ -82,10 +82,10 @@ A JSON-RPC response object with a single member:
 Example:
 ```json
 {
+  "id": 0,
   "jsonrpc": "2.0",
   "result": {
     "paymasterAndData": "0xbcd12340a2109876543210987654301098765432198765432"
-  },
-  "id": "1"
+  }
 }
 ```

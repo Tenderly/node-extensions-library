@@ -5,7 +5,7 @@ actions:
     sources: actions
     specs:
       pmSupportedEntryPoints:
-        description: This function returns the list of entryPoint contracts that are supported on that chain.
+        description: This function returns the list of EntryPoint contracts that are supported on that chain.
         function: extension:pmSupportedEntryPoints
         trigger:
           type: webhook

@@ -1,9 +1,9 @@
-import {ActionFn, Context, Event, ExtensionEvent} from '@tenderly/actions';
+import { ActionFn, Context, Event, ExtensionEvent } from '@tenderly/actions';
 import { ethers } from 'ethers';
-import {BatchRequestJSON} from "./constants/constants";
+import { BatchRequestJSON } from './constants/constants';
 
-const FACTORY = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"; // Pairs deployed: 10000835
-const abi = ["function allPairsLength() external view returns (uint)"];
+const FACTORY = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'; // Pairs deployed: 10000835
+const abi = ['function allPairsLength() external view returns (uint)'];
 
 export const multicallUniswapERC20Balance: ActionFn = async (context: Context, event: Event) => {
   // Casting the event to a ExtensionEvent
@@ -15,31 +15,31 @@ export const multicallUniswapERC20Balance: ActionFn = async (context: Context, e
   // Using the Ethers.js provider class to call the RPC URL
   const provider = new ethers.providers.JsonRpcProvider(defaultGatewayURL);
 
-  // Getting the input data from the webhook event
-  const [ offsetHex, limitHex ] = params;
-  const offset = parseInt(offsetHex)
-  const limit = parseInt(limitHex)
+  // Getting the input data from the node extension event
+  const [offsetHex, limitHex] = params;
+  const offset = parseInt(offsetHex);
+  const limit = parseInt(limitHex);
 
   const step = 200;
   const factory = new ethers.Contract(FACTORY, abi, provider);
   const pairsLength = await factory.allPairsLength();
 
   if (limit > 1000) {
-    throw new Error(`limit exceeds maximum value of 1000`);
+    throw new Error(`Limit exceeds maximum value of 1000.`);
   }
 
   if ((offset + limit) > pairsLength) {
-    throw new Error('offset + limit exceeds number of pairs length');
+    throw new Error('Offset + limit exceeds number of pairs length.');
   }
 
-  const values = []
+  const values = [];
 
   // Iterate by batches
   for (let i = offset; i < offset + limit; i += step) {
-    // Get the bytecode and append the consturctor args
+    // Get the bytecode and append the constructor args
     let inputData = ethers.utils.defaultAbiCoder.encode(
-        ["uint256", "uint256", "address"],
-        [i, step, FACTORY]
+      ['uint256', 'uint256', 'address'],
+      [i, step, FACTORY],
     );
 
     const payload = BatchRequestJSON.bytecode.concat(inputData.slice(2));
@@ -49,13 +49,13 @@ export const multicallUniswapERC20Balance: ActionFn = async (context: Context, e
 
     // Abi decode the array
     const [decoded] = ethers.utils.defaultAbiCoder.decode(
-        ["uint256[]"],
-        returnedData
+      ['uint256[]'],
+      returnedData,
     );
 
     // add balances to the array
     for (let j = 0; j < decoded.length; j++) {
-      values.push(decoded[j]._hex)
+      values.push(decoded[j]._hex);
     }
   }
 

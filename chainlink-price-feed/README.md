@@ -23,7 +23,7 @@ Go to JSON-RPC Request Builder and select "Chainlink Price Feed" from the dropdo
 
 Parameters
 
-1. DATA, Coin pair.
+1. **DATA**, Coin pair.
 
 Example:
 ```json

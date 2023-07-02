@@ -20,7 +20,7 @@ This library is a collection of Tenderly Node Extensions. It’s used to extend 
 
 Node Extensions are a game-changing enhancement to our existing production node. This feature allows devs to create custom JSON-RPC method names and write custom JS/TS code snippets that are executed each time the method is called. It’s like having your very own sorcerer’s apprentice working behind the scenes! 🧙‍
 
-> ###  **Note:** Node Extensions require [@tenderly/actions](https://github.com/Tenderly/tenderly-actions) version >= **0.2.0**.
+> ### **Note:** Node Extensions require [@tenderly/actions](https://github.com/Tenderly/tenderly-actions) version >= **0.2.0**.
 
 ## Getting Started
 

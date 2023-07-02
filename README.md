@@ -53,17 +53,17 @@ Full documentation with detailed instructions can be found here:
 
 To get started creating your own node extensions, you can use the following Node Extension Starter Pack:
 
-- [node-extension-starter](./node-extension-starter) - This Node Extension gets the block from the network, where the `result.transactions` is a list of transaction hashes.
-- [node-extension-starter-jest](./node-extension-starter-jest) - This Node Extension gets the block from the network, where the `result.transactions` is a list of transaction hashes and has the Jest testing library installed.
+- [node-extension-starter](./node-extension-starter) - This Tenderly Node Extension gets the block from the network, where the `result.transactions` is a list of transaction hashes.
+- [node-extension-starter-jest](./node-extension-starter-jest) - This Tenderly Node Extension gets the block from the network, where the `result.transactions` is a list of transaction hashes and has the Jest testing library installed.
 
 Here are examples of Node Extensions that you can use in your projects:
 
-- [chainlink-price-feed](./chainlink-price-feed) - Use this Node Extension to query Chainlink Price Feeds.
-- [multicall-uniswap-erc20-balance](./multicall-uniswap-erc20-balance) - This Node Extension uses Wonderland's multicall strategy to quickly fetch Uniswap's ERC20 balances.
-- [pm-can-sponsor-user-operation](./pm-can-sponsor-user-operation) - Use this Node Extension to check whether Pimlico's Paymaster service can sponsor a User Operation on behalf of a third-party dapp.
-- [pm-sponsor-user-operation](./pm-sponsor-user-operation) - This Node Extension asks Pimlico's Paymaster to sponsor a submitted User Operation on behalf of a wallet.
-- [pm-supported-entry-points](./pm-supported-entry-points) - This Node Extension returns the list of entryPoint contracts that are supported on the chain you’re using.
-- [polygon-block-author](./polygon-block-author) - Use this Node Extension to get the block author for a given block number on Polygon (Matic) network.
+- [chainlink-price-feed](./chainlink-price-feed) - Use this Tenderly Node Extension to query Chainlink Price Feeds.
+- [multicall-uniswap-erc20-balance](./multicall-uniswap-erc20-balance) - This Tenderly Node Extension uses Wonderland's multicall strategy to quickly fetch Uniswap's ERC20 balances.
+- [pm-can-sponsor-user-operation](./pm-can-sponsor-user-operation) - Use this Tenderly Node Extension to check whether Pimlico's Paymaster service can sponsor a User Operation on behalf of a third-party dapp.
+- [pm-sponsor-user-operation](./pm-sponsor-user-operation) - This Tenderly Node Extension asks Pimlico's Paymaster to sponsor a submitted User Operation on behalf of a wallet.
+- [pm-supported-entry-points](./pm-supported-entry-points) - This Tenderly Node Extension returns the list of entryPoint contracts that are supported on the chain you’re using.
+- [polygon-block-author](./polygon-block-author) - Use this Tenderly Node Extension to get the block author for a given block number on Polygon (Matic) network.
 - [simulate-mempool-transaction](./simulate-mempool-transaction) - This Tenderly Node Extension allows you to simulate a transaction in the mempool.
 - [simulate-send-transaction](./simulate-send-transaction) - This Tenderly Node Extension allows you to simulate a transaction before sending on-chain.
 

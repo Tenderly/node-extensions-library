@@ -9,10 +9,14 @@ lower the consumption of the node RPC.
 Go to the Extensions Library and search for "Multicall ERC20 Uniswap Balance". Click on the extension and click
 "Activate".
 
+![image](https://github.com/Tenderly/node-extensions-library/assets/26412515/345a6efc-62c7-4484-95c5-56f64a341b70)
+
 ## Usage
 
 Go to JSON-RPC Request Builder and select "Multicall ERC20 Uniswap Balance" from the dropdown menu. You can then enter
 the JSON payload and click "Send Request".
+
+![image](https://github.com/Tenderly/node-extensions-library/assets/26412515/bb3fbdc8-9104-47cb-b67a-51fc992558ec)
 
 ## Method
 

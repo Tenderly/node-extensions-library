@@ -14,10 +14,14 @@ More info can be found here: https://docs.pimlico.io/reference/pm_supportedentry
 Go to the Extensions Library and search for "pmSupportedEntryPoints". Click on the extension and click
 "Activate".
 
+![image](https://github.com/Tenderly/node-extensions-library/assets/26412515/c3dbb551-0365-4855-a25a-27da9965f868)
+
 ## Usage
 
 Go to JSON-RPC Request Builder and select "PM Supported Entry Points" from the dropdown menu. You can then enter the
 JSON payload and click "Send Request".
+
+![image](https://github.com/Tenderly/node-extensions-library/assets/26412515/4be0a62e-e119-4612-8089-d84140a1f17c)
 
 ## Method
 

@@ -22,9 +22,13 @@ More info can be found here: https://docs.pimlico.io/reference/pm_sponsoruserope
 Go to the Extensions Library and search for "pmSponsorUserOperation". Click on the extension and click
 "Activate".
 
+![image](https://github.com/Tenderly/node-extensions-library/assets/26412515/5ddd150e-7a35-484e-bdaf-edd1cd5db374)
+
 ## Usage
 
 Go to JSON-RPC Request Builder and select "PM Sponsor User Operation" from the dropdown menu. You can then enter the JSON payload and click "Send Request".
+
+![image](https://github.com/Tenderly/node-extensions-library/assets/26412515/e83edf9e-51f0-4eb9-9e5d-175fe6d9a488)
 
 ## Method
 
